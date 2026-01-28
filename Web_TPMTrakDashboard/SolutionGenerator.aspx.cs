@@ -136,8 +136,9 @@ namespace Web_TPMTrakDashboard
             string csContent = GetCsTemplate(pageName, filters, columns, actionSettings);
             string designerContent = GetDesignerTemplate(pageName);
 
-            string solutionRoot = @"d:\01_Work\Web\FY25_26\Hackathon_Jan'2026\TPM-Trak_Studio";
-            string dbAccessPath = Path.Combine(solutionRoot, "Web_TPMTrakDashboard", "Models", "TPMStudioDBAccess.cs");
+            string projectDir = Server.MapPath("~");
+            string csprojPath = GetProjectFilePath(projectDir);
+            string dbAccessPath = !string.IsNullOrEmpty(csprojPath) ? Path.Combine(Path.GetDirectoryName(csprojPath), "Models", "TPMStudioDBAccess.cs") : Path.Combine(projectDir, "Models", "TPMStudioDBAccess.cs");
             string dbAccessContent = File.Exists(dbAccessPath) ? File.ReadAllText(dbAccessPath) : "";
 
             using (var memoryStream = new MemoryStream())
@@ -219,28 +220,33 @@ namespace Web_TPMTrakDashboard
         private void GenerateSolution(string pageName, string pageTitle, string customPublishPath, List<FilterConfiguration> filters, List<GridColumnDefinition> columns, ActionButtonSettings actionSettings)
         {
             // 1. Identify Paths
-            string solutionRoot = @"d:\01_Work\Web\FY25_26\Hackathon_Jan'2026\TPM-Trak_Studio";
-            string projectDir = Path.Combine(solutionRoot, "Web_TPMTrakDashboard");
+            string projectDir = Server.MapPath("~");
+            string csprojPath = GetProjectFilePath(projectDir);
+            if (string.IsNullOrEmpty(csprojPath)) throw new Exception("Could not find any .csproj file in " + projectDir + " or its parent/sibling directories.");
+            
+            string sourceProjectRoot = Path.GetDirectoryName(csprojPath);
+            string downloadsPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile), "Downloads");
+            string downloadRoot = Path.Combine(downloadsPath, "TPMStudio_Generated");
 
             // Handle Import Template
             if (actionSettings.EnableImport && fuImportTemplate.HasFile)
             {
-                string tempDir = Path.Combine(projectDir, "Temp", "ImportTemplate");
+                string tempDir = Path.Combine(sourceProjectRoot, "Temp", "ImportTemplate");
                 if (!Directory.Exists(tempDir)) Directory.CreateDirectory(tempDir);
                 string filePath = Path.Combine(tempDir, fuImportTemplate.FileName);
                 fuImportTemplate.SaveAs(filePath);
             }
             
             // Paths for build and artifact generation
-            string tempBase = Path.Combine(solutionRoot, "GeneratedSolutions", Guid.NewGuid().ToString("N"));
+            string tempBase = Path.Combine(downloadRoot, Guid.NewGuid().ToString("N"));
             string publishOutput = Path.Combine(tempBase, "Publish");
             string zipFile = Path.Combine(tempBase, pageName + "_Published.zip");
 
             Directory.CreateDirectory(tempBase);
             Directory.CreateDirectory(publishOutput);
 
-            // 2. Prepare Temp/Output Directory for Source (for generation)
-            string tempProjectDir = Path.Combine(solutionRoot, "GeneratedSolutions", pageName);
+            // 2. Prepare Directory for Source (for generation) - Site it inside the Source Project
+            string tempProjectDir = Path.Combine(sourceProjectRoot, "GeneratedSolutions", pageName);
             if (Directory.Exists(tempProjectDir)) Directory.Delete(tempProjectDir, true);
             Directory.CreateDirectory(tempProjectDir);
 
@@ -254,8 +260,7 @@ namespace Web_TPMTrakDashboard
             File.WriteAllText(designerPath, GetDesignerTemplate(pageName));
 
             // 4. Update .csproj
-            string csprojPath = Path.Combine(projectDir, "Web_TPMTrakDashboard.csproj");
-            UpdateCsproj(csprojPath, pageName);
+            UpdateCsproj(csprojPath, pageName, tempProjectDir);
 
             // 5. Build & Publish
             BuildProject(csprojPath, publishOutput);
@@ -281,7 +286,50 @@ namespace Web_TPMTrakDashboard
             DownloadZip(zipFile, pageName + "_Published.zip");
         }
 
-        private void UpdateCsproj(string csprojPath, string pageName)
+        private string GetProjectFilePath(string projectDir)
+        {
+            // 1. Current dir
+            string[] csprojs = Directory.GetFiles(projectDir, "*.csproj");
+            if (csprojs.Length > 0) return csprojs[0];
+
+            string parent = Path.GetDirectoryName(projectDir);
+            if (parent == null) return null;
+
+            // 2. Parent dir
+            csprojs = Directory.GetFiles(parent, "*.csproj");
+            if (csprojs.Length > 0) return csprojs[0];
+
+            // 3. Known sibling: "TPM-Trak Studio\Web_TPMTrakDashboard"
+            string knownSibling = Path.Combine(parent, "TPM-Trak Studio", "Web_TPMTrakDashboard");
+            if (Directory.Exists(knownSibling))
+            {
+                csprojs = Directory.GetFiles(knownSibling, "*.csproj");
+                if (csprojs.Length > 0) return csprojs[0];
+            }
+
+            // 4. Any sibling directory
+            try
+            {
+                foreach (var dir in Directory.GetDirectories(parent))
+                {
+                    if (dir.Equals(projectDir, StringComparison.OrdinalIgnoreCase)) continue;
+                    csprojs = Directory.GetFiles(dir, "*.csproj");
+                    if (csprojs.Length > 0) return csprojs[0];
+
+                    // Check one level deeper (for common Project/Project/Project.csproj structures)
+                    foreach (var subDir in Directory.GetDirectories(dir))
+                    {
+                        csprojs = Directory.GetFiles(subDir, "*.csproj");
+                        if (csprojs.Length > 0) return csprojs[0];
+                    }
+                }
+            }
+            catch { }
+
+            return null;
+        }
+
+        private void UpdateCsproj(string csprojPath, string pageName, string tempProjectDir)
         {
             XmlDocument doc = new XmlDocument();
             doc.Load(csprojPath);
@@ -295,15 +343,21 @@ namespace Web_TPMTrakDashboard
                 doc.DocumentElement.AppendChild(itemGroup);
             }
 
-            // Add Content
+            // We need the relative path from the .csproj file to the generated files
+            string projectFolder = Path.GetDirectoryName(csprojPath);
+            Uri projectUri = new Uri(projectFolder + Path.DirectorySeparatorChar);
+            Uri aspxUri = new Uri(Path.Combine(tempProjectDir, pageName + ".aspx"));
+            string relativePath = projectUri.MakeRelativeUri(aspxUri).ToString().Replace("/", "\\");
+
+            // Add Content (use relative path)
             XmlElement contentNode = doc.CreateElement("Content", "http://schemas.microsoft.com/developer/msbuild/2003");
-            contentNode.SetAttribute("Include", pageName + ".aspx");
+            contentNode.SetAttribute("Include", relativePath);
             itemGroup.AppendChild(contentNode);
 
             // Add Compile
             XmlNode compileGroup = doc.SelectSingleNode("//ms:ItemGroup[ms:Compile]", nsmgr);
             XmlElement compileNode = doc.CreateElement("Compile", "http://schemas.microsoft.com/developer/msbuild/2003");
-            compileNode.SetAttribute("Include", pageName + ".aspx.cs");
+            compileNode.SetAttribute("Include", relativePath + ".cs");
 
             XmlElement depNode = doc.CreateElement("DependentUpon", "http://schemas.microsoft.com/developer/msbuild/2003");
             depNode.InnerText = pageName + ".aspx";
@@ -317,7 +371,7 @@ namespace Web_TPMTrakDashboard
 
             // Add Designer
             XmlElement designerNode = doc.CreateElement("Compile", "http://schemas.microsoft.com/developer/msbuild/2003");
-            designerNode.SetAttribute("Include", pageName + ".aspx.designer.cs");
+            designerNode.SetAttribute("Include", relativePath.Replace(".aspx", ".aspx.designer.cs"));
             XmlElement depNode2 = doc.CreateElement("DependentUpon", "http://schemas.microsoft.com/developer/msbuild/2003");
             depNode2.InnerText = pageName + ".aspx";
             designerNode.AppendChild(depNode2);

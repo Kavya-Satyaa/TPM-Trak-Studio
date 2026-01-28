@@ -136,7 +136,7 @@ namespace Web_TPMTrakDashboard
             string csContent = GetCsTemplate(pageName, filters, columns, actionSettings);
             string designerContent = GetDesignerTemplate(pageName);
 
-            string solutionRoot = @"d:\01_Work\Web\FY25_26\Hackathon_Jan'2026\TPM-Trak_Studio";
+            string solutionRoot = @"C:\TPM-Trak Studio";
             string dbAccessPath = Path.Combine(solutionRoot, "Web_TPMTrakDashboard", "Models", "TPMStudioDBAccess.cs");
             string dbAccessContent = File.Exists(dbAccessPath) ? File.ReadAllText(dbAccessPath) : "";
 
@@ -219,7 +219,7 @@ namespace Web_TPMTrakDashboard
         private void GenerateSolution(string pageName, string pageTitle, string customPublishPath, List<FilterConfiguration> filters, List<GridColumnDefinition> columns, ActionButtonSettings actionSettings)
         {
             // 1. Identify Paths
-            string solutionRoot = @"d:\01_Work\Web\FY25_26\Hackathon_Jan'2026\TPM-Trak_Studio";
+            string solutionRoot = @"C:\TPM-Trak Studio";
             string projectDir = Path.Combine(solutionRoot, "Web_TPMTrakDashboard");
 
             // Handle Import Template
@@ -230,7 +230,7 @@ namespace Web_TPMTrakDashboard
                 string filePath = Path.Combine(tempDir, fuImportTemplate.FileName);
                 fuImportTemplate.SaveAs(filePath);
             }
-            
+
             // Paths for build and artifact generation
             string tempBase = Path.Combine(solutionRoot, "GeneratedSolutions", Guid.NewGuid().ToString("N"));
             string publishOutput = Path.Combine(tempBase, "Publish");
@@ -239,8 +239,8 @@ namespace Web_TPMTrakDashboard
             Directory.CreateDirectory(tempBase);
             Directory.CreateDirectory(publishOutput);
 
-            // 2. Prepare Temp/Output Directory for Source (for generation)
-            string tempProjectDir = Path.Combine(solutionRoot, "GeneratedSolutions", pageName);
+            // 2. Prepare Temp/Output Directory for Source (for generation) - Site it inside the Source Project
+            string tempProjectDir = Path.Combine(projectDir, "GeneratedSolutions", pageName);
             if (Directory.Exists(tempProjectDir)) Directory.Delete(tempProjectDir, true);
             Directory.CreateDirectory(tempProjectDir);
 
@@ -255,7 +255,8 @@ namespace Web_TPMTrakDashboard
 
             // 4. Update .csproj
             string csprojPath = Path.Combine(projectDir, "Web_TPMTrakDashboard.csproj");
-            UpdateCsproj(csprojPath, pageName);
+            string relativePath = "GeneratedSolutions\\" + pageName + "\\" + pageName + ".aspx";
+            UpdateCsproj(csprojPath, relativePath);
 
             // 5. Build & Publish
             BuildProject(csprojPath, publishOutput);
@@ -281,12 +282,20 @@ namespace Web_TPMTrakDashboard
             DownloadZip(zipFile, pageName + "_Published.zip");
         }
 
-        private void UpdateCsproj(string csprojPath, string pageName)
+        private void UpdateCsproj(string csprojPath, string relativePath)
         {
+            string pageName = Path.GetFileNameWithoutExtension(relativePath);
+            string dir = Path.GetDirectoryName(relativePath);
+            string csRel = Path.Combine(dir, pageName + ".aspx.cs");
+            string designerRel = Path.Combine(dir, pageName + ".aspx.designer.cs");
+
             XmlDocument doc = new XmlDocument();
             doc.Load(csprojPath);
             XmlNamespaceManager nsmgr = new XmlNamespaceManager(doc.NameTable);
             nsmgr.AddNamespace("ms", "http://schemas.microsoft.com/developer/msbuild/2003");
+
+            // Check if already exists to avoid duplicates
+            if (doc.SelectSingleNode($"//ms:Content[@Include='{relativePath}']", nsmgr) != null) return;
 
             XmlNode itemGroup = doc.SelectSingleNode("//ms:ItemGroup[ms:Content]", nsmgr);
             if (itemGroup == null)
@@ -297,27 +306,26 @@ namespace Web_TPMTrakDashboard
 
             // Add Content
             XmlElement contentNode = doc.CreateElement("Content", "http://schemas.microsoft.com/developer/msbuild/2003");
-            contentNode.SetAttribute("Include", pageName + ".aspx");
+            contentNode.SetAttribute("Include", relativePath);
             itemGroup.AppendChild(contentNode);
 
             // Add Compile
             XmlNode compileGroup = doc.SelectSingleNode("//ms:ItemGroup[ms:Compile]", nsmgr);
-            XmlElement compileNode = doc.CreateElement("Compile", "http://schemas.microsoft.com/developer/msbuild/2003");
-            compileNode.SetAttribute("Include", pageName + ".aspx.cs");
 
+            // Codebehind
+            XmlElement compileNode = doc.CreateElement("Compile", "http://schemas.microsoft.com/developer/msbuild/2003");
+            compileNode.SetAttribute("Include", csRel);
             XmlElement depNode = doc.CreateElement("DependentUpon", "http://schemas.microsoft.com/developer/msbuild/2003");
             depNode.InnerText = pageName + ".aspx";
             compileNode.AppendChild(depNode);
-
             XmlElement subTypeNode = doc.CreateElement("SubType", "http://schemas.microsoft.com/developer/msbuild/2003");
             subTypeNode.InnerText = "ASPXCodeBehind";
             compileNode.AppendChild(subTypeNode);
-
             compileGroup.AppendChild(compileNode);
 
-            // Add Designer
+            // Designer
             XmlElement designerNode = doc.CreateElement("Compile", "http://schemas.microsoft.com/developer/msbuild/2003");
-            designerNode.SetAttribute("Include", pageName + ".aspx.designer.cs");
+            designerNode.SetAttribute("Include", designerRel);
             XmlElement depNode2 = doc.CreateElement("DependentUpon", "http://schemas.microsoft.com/developer/msbuild/2003");
             depNode2.InnerText = pageName + ".aspx";
             designerNode.AppendChild(depNode2);
@@ -339,11 +347,25 @@ namespace Web_TPMTrakDashboard
 
             string msbuildPath = searchPaths.FirstOrDefault(p => File.Exists(p));
 
-            // Fallback to searching in path or throwing
             if (!File.Exists(msbuildPath)) throw new Exception("MSBuild.exe not found. Please ensure Microsoft Visual Studio 2019 or 2022 is installed.");
 
             string vsVersion = msbuildPath.Contains("2019") ? "16.0" : "17.0";
-            string args = $"\"{csprojPath}\" /p:Configuration=Release /p:DeployOnBuild=true /p:PublishUrl=\"{publishOutput}\" /p:WebPublishMethod=FileSystem /p:DeployTarget=WebPublish /p:VisualStudioVersion={vsVersion}";
+
+            // Generate temp paths for build artifacts
+            string tempBase = Path.GetDirectoryName(publishOutput);
+            string tempObj = Path.Combine(tempBase, "obj");
+            string tempBin = Path.Combine(tempBase, "bin");
+
+            // Calculate relative paths to avoid issues with single quotes in the absolute path (MSB4023)
+            string projectFolder = Path.GetDirectoryName(csprojPath);
+            if (!projectFolder.EndsWith("\\")) projectFolder += "\\";
+
+            Uri fromUri = new Uri(projectFolder);
+            string relPublish = Uri.UnescapeDataString(fromUri.MakeRelativeUri(new Uri(publishOutput.TrimEnd('\\') + "\\")).ToString()).Replace("/", "\\").TrimEnd('\\');
+            string relObj = Uri.UnescapeDataString(fromUri.MakeRelativeUri(new Uri(tempObj.TrimEnd('\\') + "\\")).ToString()).Replace("/", "\\").TrimEnd('\\');
+            string relBin = Uri.UnescapeDataString(fromUri.MakeRelativeUri(new Uri(tempBin.TrimEnd('\\') + "\\")).ToString()).Replace("/", "\\").TrimEnd('\\');
+
+            string args = $"\"{csprojPath}\" /p:Configuration=Release /p:DeployOnBuild=true /p:PublishUrl=\"{relPublish}\\\\\" /p:WebPublishMethod=FileSystem /p:DeployTarget=WebPublish /p:VisualStudioVersion={vsVersion} /p:BaseIntermediateOutputPath=\"{relObj}\\\\\" /p:OutputPath=\"{relBin}\\\\\" /v:m /nologo";
 
             ProcessStartInfo psi = new ProcessStartInfo(msbuildPath, args)
             {
@@ -361,7 +383,12 @@ namespace Web_TPMTrakDashboard
 
                 if (p.ExitCode != 0)
                 {
-                    throw new Exception("Build failed: " + error + "\nLog: " + output);
+                    string relevantError = "";
+                    var lines = output.Split(new[] { Environment.NewLine }, StringSplitOptions.None);
+                    var errorLines = lines.Where(l => l.Contains("error ") || l.Contains("Error ")).ToList();
+                    relevantError = errorLines.Count > 0 ? string.Join("\n", errorLines.Take(5)) : error;
+
+                    throw new Exception("Build failed. " + relevantError + "\n\nLog Summary:\n" + (output.Length > 1000 ? output.Substring(output.Length - 1000) : output));
                 }
             }
         }
@@ -433,12 +460,12 @@ namespace Web_TPMTrakDashboard
                     {
                         filtersHtml.AppendLine($@"                    <asp:TextBox ID=""txtDate"" runat=""server"" TextMode=""Date"" CssClass=""dropdown-control"" />");
                     }
-                     else if (filter.Mode == "DateRange")
+                    else if (filter.Mode == "DateRange")
                     {
-                         filtersHtml.AppendLine($@"                    <div class=""date-range-container"">");
-                         filtersHtml.AppendLine($@"                        <asp:TextBox ID=""txtFromDate"" runat=""server"" TextMode=""Date"" CssClass=""dropdown-control"" />");
-                         filtersHtml.AppendLine($@"                        <asp:TextBox ID=""txtToDate"" runat=""server"" TextMode=""Date"" CssClass=""dropdown-control"" />");
-                         filtersHtml.AppendLine($@"                    </div>");
+                        filtersHtml.AppendLine($@"                    <div class=""date-range-container"">");
+                        filtersHtml.AppendLine($@"                        <asp:TextBox ID=""txtFromDate"" runat=""server"" TextMode=""Date"" CssClass=""dropdown-control"" />");
+                        filtersHtml.AppendLine($@"                        <asp:TextBox ID=""txtToDate"" runat=""server"" TextMode=""Date"" CssClass=""dropdown-control"" />");
+                        filtersHtml.AppendLine($@"                    </div>");
                     }
                 }
 
@@ -797,26 +824,28 @@ namespace Web_TPMTrakDashboard
 
             colCode.AppendLine($@"                gvReport.DataKeyNames = new string[] {{ {keyNames} }};");
 
+            int colIdx = 1;
             foreach (var col in columns)
             {
                 if (col.ControlType == "Label")
                 {
-                    colCode.AppendLine($@"                var boundCol = new BoundField();
-                boundCol.HeaderText = ""{col.Name}"";
-                boundCol.DataField = ""{col.Name}"";
-                gvReport.Columns.Add(boundCol);");
+                    colCode.AppendLine($@"                var boundCol{colIdx} = new BoundField();
+                boundCol{colIdx}.HeaderText = ""{col.Name}"";
+                boundCol{colIdx}.DataField = ""{col.Name}"";
+                gvReport.Columns.Add(boundCol{colIdx});");
                 }
                 else
                 {
-                    colCode.AppendLine($@"                var templateCol = new TemplateField();
-                templateCol.HeaderText = ""{col.Name}"";
-                templateCol.ItemTemplate = new DynamicTemplate(""{col.Name}"", ""{col.ControlType}"");
-                gvReport.Columns.Add(templateCol);");
+                    colCode.AppendLine($@"                var templateCol{colIdx} = new TemplateField();
+                templateCol{colIdx}.HeaderText = ""{col.Name}"";
+                templateCol{colIdx}.ItemTemplate = new DynamicTemplate_{className}(""{col.Name}"", ""{col.ControlType}"");
+                gvReport.Columns.Add(templateCol{colIdx});");
                 }
+                colIdx++;
             }
             colCode.AppendLine($@"                var actionCol = new TemplateField();
                 actionCol.HeaderText = ""Action"";
-                actionCol.ItemTemplate = new DynamicTemplate(""Action"", ""DeleteButton"");
+                actionCol.ItemTemplate = new DynamicTemplate_{className}(""Action"", ""DeleteButton"");
                 actionCol.ItemStyle.HorizontalAlign = HorizontalAlign.Center;
                 gvReport.Columns.Add(actionCol);");
 
@@ -878,14 +907,16 @@ namespace Web_TPMTrakDashboard
             if (hasD4) filterChangedBody.AppendLine($@"                BindDdl4(GetSelectedValues(""Ddl2""), GetSelectedValues(""Ddl3"")); RestoreSelection(""Ddl4"");");
             filterChangedBody.AppendLine($@"            }}");
 
-            if (hasD2) {
+            if (hasD2)
+            {
                 filterChangedBody.AppendLine($@"            else if (senderID.EndsWith(""Ddl2"")) {{");
                 if (hasD3) filterChangedBody.AppendLine($@"                BindDdl3(machineVal); RestoreSelection(""Ddl3"");");
                 if (hasD4) filterChangedBody.AppendLine($@"                BindDdl4(machineVal, GetSelectedValues(""Ddl3"")); RestoreSelection(""Ddl4"");");
                 filterChangedBody.AppendLine($@"            }}");
             }
 
-            if (hasD3) {
+            if (hasD3)
+            {
                 filterChangedBody.AppendLine($@"            else if (senderID.EndsWith(""Ddl3"")) {{");
                 if (hasD4) filterChangedBody.AppendLine($@"                BindDdl4(machineVal, componentVal); RestoreSelection(""Ddl4"");");
                 filterChangedBody.AppendLine($@"            }}");
@@ -943,7 +974,7 @@ namespace Web_TPMTrakDashboard
             sb.AppendLine("                        DataTable dt = Session[\"Items_\" + id] as DataTable;");
             sb.AppendLine("                        if (dt != null) {");
             sb.AppendLine("                            lc.DataSource = dt; lc.DataBind();");
-            sb.AppendLine("                            if (lc is DropDownList) lc.Items.Insert(0, new ListItem(\"-- Select --\", \"\"));");
+            sb.AppendLine("                            if (lc is DropDownList) lc.Items.Insert(0, new System.Web.UI.WebControls.ListItem(\"-- Select --\", \"\"));");
             sb.AppendLine("                        }");
             sb.AppendLine("                        RestoreSelection(lc, id);");
             sb.AppendLine("                    }");
@@ -1014,7 +1045,7 @@ namespace Web_TPMTrakDashboard
             sb.AppendLine("                lc.DataTextField = dt.Columns.Count > 1 ? dt.Columns[1].ColumnName : dt.Columns[0].ColumnName;");
             sb.AppendLine("            }");
             sb.AppendLine("            lc.DataBind();");
-            sb.AppendLine("            if (d && lc is DropDownList) lc.Items.Insert(0, new ListItem(\"-- Select --\", \"\"));");
+            sb.AppendLine("            if (d && lc is DropDownList) lc.Items.Insert(0, new System.Web.UI.WebControls.ListItem(\"-- Select --\", \"\"));");
             sb.AppendLine("            Session[\"Items_\" + id] = dt;");
             sb.AppendLine("            RestoreSelection(lc, id);");
             sb.AppendLine("        }");
@@ -1073,22 +1104,21 @@ namespace Web_TPMTrakDashboard
             sb.AppendLine();
             sb.AppendLine("        private void ExportToExcel(string title)");
             sb.AppendLine("        {");
-            sb.AppendLine("            ExcelPackage.LicenseContext = LicenseContext.NonCommercial;");
-            sb.AppendLine("            using (ExcelPackage pck = new ExcelPackage())");
+            sb.AppendLine("            using (OfficeOpenXml.ExcelPackage pck = new OfficeOpenXml.ExcelPackage())");
             sb.AppendLine("            {");
-            sb.AppendLine($@"                ExcelWorksheet ws = pck.Workbook.Worksheets.Add(""Report"");");
-            sb.AppendLine("                int colCount = 0; List<int> visibleColIndices = new List<int>();");
+            sb.AppendLine($@"                OfficeOpenXml.ExcelWorksheet ws = pck.Workbook.Worksheets.Add(""Report"");");
+            sb.AppendLine("                int colCountVal = 0; List<int> visibleColIndices = new List<int>();");
             sb.AppendLine("                for (int i = 0; i < gvReport.Columns.Count; i++)");
             sb.AppendLine("                {");
             sb.AppendLine($@"                    if (gvReport.Columns[i].Visible && gvReport.Columns[i].HeaderText != ""Action"")");
-            sb.AppendLine("                    { colCount++; visibleColIndices.Add(i); }");
+            sb.AppendLine("                    { colCountVal++; visibleColIndices.Add(i); }");
             sb.AppendLine("                }");
-            sb.AppendLine("                if (colCount > 0)");
+            sb.AppendLine("                if (colCountVal > 0)");
             sb.AppendLine("                {");
-            sb.AppendLine("                    ws.Cells[1, 1, 2, colCount].Merge = true;");
+            sb.AppendLine("                    ws.Cells[1, 1, 2, colCountVal].Merge = true;");
             sb.AppendLine($@"                    ws.Cells[1, 1].Value = title + "" REPORT"";");
             sb.AppendLine("                    ws.Cells[1, 1].Style.Font.Size = 16; ws.Cells[1, 1].Style.Font.Bold = true;");
-            sb.AppendLine($@"                    ws.Cells[1, 1].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;");
+            sb.AppendLine($@"                    ws.Cells[1, 1].Style.HorizontalAlignment = OfficeOpenXml.Style.ExcelHorizontalAlignment.Center;");
             sb.AppendLine("                }");
             sb.AppendLine("                int excelCol = 1;");
             sb.AppendLine("                foreach (int idx in visibleColIndices)");
@@ -1122,19 +1152,19 @@ namespace Web_TPMTrakDashboard
             sb.AppendLine();
             sb.AppendLine("        private void ExportToPDF(string title)");
             sb.AppendLine("        {");
-            sb.AppendLine("            int colCount = 0; foreach(DataControlField col in gvReport.Columns) { if(col.Visible && col.HeaderText != \"Action\") colCount++; }");
-            sb.AppendLine($@"            Document pdfDoc = new Document(PageSize.A4.Rotate(), 10f, 10f, 10f, 0f);");
+            sb.AppendLine("            int colCountVal = 0; foreach(DataControlField col in gvReport.Columns) { if(col.Visible && col.HeaderText != \"Action\") colCountVal++; }");
+            sb.AppendLine($@"            iTextSharp.text.Document pdfDoc = new iTextSharp.text.Document(iTextSharp.text.PageSize.A4.Rotate(), 10f, 10f, 10f, 0f);");
             sb.AppendLine("            using (MemoryStream ms = new MemoryStream())");
             sb.AppendLine("            {");
-            sb.AppendLine("                PdfWriter writer = PdfWriter.GetInstance(pdfDoc, ms); pdfDoc.Open();");
-            sb.AppendLine("                PdfPTable table = new PdfPTable(colCount); table.WidthPercentage = 100;");
-            sb.AppendLine($@"                PdfPCell headerCell = new PdfPCell(new Phrase(title + "" REPORT"", FontFactory.GetFont(""Arial"", 16, Font.BOLD)));");
-            sb.AppendLine("                headerCell.Colspan = colCount; headerCell.HorizontalAlignment = Element.ALIGN_CENTER; headerCell.Border = Rectangle.NO_BORDER; table.AddCell(headerCell);");
-            sb.AppendLine("                foreach (DataControlField col in gvReport.Columns) { if (col.Visible && col.HeaderText != \"Action\") { table.AddCell(new Phrase(col.HeaderText, FontFactory.GetFont(\"Arial\", 10, Font.BOLD))); } }");
+            sb.AppendLine("                iTextSharp.text.pdf.PdfWriter writer = iTextSharp.text.pdf.PdfWriter.GetInstance(pdfDoc, ms); pdfDoc.Open();");
+            sb.AppendLine("                iTextSharp.text.pdf.PdfPTable table = new iTextSharp.text.pdf.PdfPTable(colCountVal); table.WidthPercentage = 100;");
+            sb.AppendLine($@"                iTextSharp.text.pdf.PdfPCell headerCell = new iTextSharp.text.pdf.PdfPCell(new iTextSharp.text.Phrase(title + "" REPORT"", iTextSharp.text.FontFactory.GetFont(""Arial"", 16, iTextSharp.text.Font.BOLD)));");
+            sb.AppendLine("                headerCell.Colspan = colCountVal; headerCell.HorizontalAlignment = iTextSharp.text.Element.ALIGN_CENTER; headerCell.Border = iTextSharp.text.Rectangle.NO_BORDER; table.AddCell(headerCell);");
+            sb.AppendLine("                foreach (DataControlField col in gvReport.Columns) { if (col.Visible && col.HeaderText != \"Action\") { table.AddCell(new iTextSharp.text.Phrase(col.HeaderText, iTextSharp.text.FontFactory.GetFont(\"Arial\", 10, iTextSharp.text.Font.BOLD))); } }");
             sb.AppendLine("                foreach (GridViewRow row in gvReport.Rows) { for (int i = 0; i < gvReport.Columns.Count; i++) { if (gvReport.Columns[i].Visible && gvReport.Columns[i].HeaderText != \"Action\") { ");
             sb.AppendLine($@"                    string cellText = """"; Control ctrl = row.Cells[i].Controls.Count > 0 ? row.Cells[i].Controls[0] : null;");
             sb.AppendLine($@"                    if (ctrl is Label) cellText = ((Label)ctrl).Text; else if (ctrl is TextBox) cellText = ((TextBox)ctrl).Text; else if (ctrl is CheckBox) cellText = ((CheckBox)ctrl).Checked ? ""Yes"" : ""No""; else cellText = row.Cells[i].Text.Replace(""&nbsp;"", """");");
-            sb.AppendLine($@"                    table.AddCell(new Phrase(cellText, FontFactory.GetFont(""Arial"", 9)));");
+            sb.AppendLine($@"                    table.AddCell(new iTextSharp.text.Phrase(cellText, iTextSharp.text.FontFactory.GetFont(""Arial"", 9)));");
             sb.AppendLine("                } } }");
             sb.AppendLine("                pdfDoc.Add(table); pdfDoc.Close();");
             sb.AppendLine("                Response.Clear(); Response.ContentType = \"application/pdf\";");
@@ -1150,16 +1180,22 @@ namespace Web_TPMTrakDashboard
             sb.AppendLine($@"            ScriptManager.RegisterStartupScript(this, GetType(), ""imp"", ""alert('Importing data...');"", true);");
             sb.AppendLine("        }");
             sb.AppendLine();
+            sb.AppendLine("        protected void gvReport_RowDeleting(object sender, GridViewDeleteEventArgs e)");
+            sb.AppendLine("        {");
+            sb.AppendLine("            // Bind context again to handle deletion logic or refresh");
+            sb.AppendLine("            BindGrid();");
+            sb.AppendLine("        }");
+            sb.AppendLine();
             sb.AppendLine("        private void BindGrid()");
             sb.AppendLine("        {");
             sb.AppendLine(@"            DataTable dt = TPMStudioDBAccess.GetDummyData(); gvReport.DataSource = dt; gvReport.DataBind();");
             sb.AppendLine("        }");
             sb.AppendLine("    }");
             sb.AppendLine();
-            sb.AppendLine("    public class DynamicTemplate : ITemplate");
+            sb.AppendLine($@"    public class DynamicTemplate_{className} : ITemplate");
             sb.AppendLine("    {");
             sb.AppendLine("        private string _colName; private string _type;");
-            sb.AppendLine($@"        public DynamicTemplate(string colName, string type) {{ _colName = colName; _type = type; }}");
+            sb.AppendLine($@"        public DynamicTemplate_{className}(string colName, string type) {{ _colName = colName; _type = type; }}");
             sb.AppendLine("        public void InstantiateIn(Control container)");
             sb.AppendLine("        {");
             sb.AppendLine($@"            if (_type == ""TextField"") {{");
@@ -1188,16 +1224,23 @@ namespace Web_TPMTrakDashboard
     public partial class {className} {{
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         protected global::System.Web.UI.WebControls.Label lblTime;
+        protected global::System.Web.UI.WebControls.GridView gvReport;
+        protected global::System.Web.UI.WebControls.Button btnView;
+        protected global::System.Web.UI.WebControls.Button btnExport;
+        protected global::System.Web.UI.WebControls.TextBox txtDate;
+        protected global::System.Web.UI.UpdatePanel upMain;
+        protected global::System.Web.UI.ScriptManager ScriptManager1;
+        
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl pnlDdl1;
-        protected global::System.Web.UI.WebControls.DropDownList ddlSelection1;
+        protected global::System.Web.UI.WebControls.ListControl ddlSelection1;
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl pnlDdl2;
-        protected global::System.Web.UI.WebControls.DropDownList ddlSelection2;
+        protected global::System.Web.UI.WebControls.ListControl ddlSelection2;
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl pnlDdl3;
-        protected global::System.Web.UI.WebControls.DropDownList ddlSelection3;
+        protected global::System.Web.UI.WebControls.ListControl ddlSelection3;
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl pnlDdl4;
-        protected global::System.Web.UI.WebControls.DropDownList ddlSelection4;
+        protected global::System.Web.UI.WebControls.ListControl ddlSelection4;
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl pnlDdl5;
-        protected global::System.Web.UI.WebControls.DropDownList ddlSelection5;
+        protected global::System.Web.UI.WebControls.ListControl ddlSelection5;
     }}
 }}";
         }

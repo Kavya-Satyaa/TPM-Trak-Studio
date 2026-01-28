@@ -591,7 +591,7 @@ namespace Web_TPMTrakDashboard
         private DataTable GetDataTableFromFile(FileUpload fileName)
         {
             DataTable dtMasterData = new DataTable();
-            //ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
+
             ExcelPackage Excel = new ExcelPackage(fileName.PostedFile.InputStream);
             var worksheet = Excel.Workbook.Worksheets.First();
             try

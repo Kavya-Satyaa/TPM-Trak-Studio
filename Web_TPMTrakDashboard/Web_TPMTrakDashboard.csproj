@@ -2362,6 +2362,8 @@
     </Content>
     <Content Include="Bundle.config" />
     <Content Include="WebAndon\AndonMaster.Master" />
+    <Content Include="GeneratedSolutions\First\First.aspx" />
+    <Content Include="GeneratedSolutions\aaa\aaa.aspx" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Scripts\_references.js" />
@@ -5287,6 +5289,20 @@
     <Compile Include="WeekDefinition.aspx.designer.cs">
       <DependentUpon>WeekDefinition.aspx</DependentUpon>
     </Compile>
+    <Compile Include="GeneratedSolutions\First\First.aspx.cs">
+      <DependentUpon>First.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GeneratedSolutions\First\First.aspx.designer.cs">
+      <DependentUpon>First.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GeneratedSolutions\aaa\aaa.aspx.cs">
+      <DependentUpon>aaa.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GeneratedSolutions\aaa\aaa.aspx.designer.cs">
+      <DependentUpon>aaa.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -5298,6 +5314,7 @@
     <Folder Include="EnergyModule\Reports\Temp\" />
     <Folder Include="GEA\Reports\GeneratedReports\" />
     <Folder Include="GEA\Reports\ReportTemplates-zh\" />
+    <Folder Include="GeneratedSolutions\" />
     <Folder Include="Logs\" />
     <Folder Include="Nippon\AndonMachineImages\" />
     <Folder Include="Pooja\ImportedFiles\" />

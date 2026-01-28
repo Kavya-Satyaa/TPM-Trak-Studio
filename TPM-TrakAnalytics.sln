@@ -1,0 +1,54 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30104.148
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web_TPMTrakDashboard", "Web_TPMTrakDashboard\Web_TPMTrakDashboard.csproj", "{5410EF58-C173-4042-8938-3291BC1CE84E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessClassLibrary", "BusinessClassLibrary\BusinessClassLibrary.csproj", "{C122516F-19D7-4D95-9C60-E1F9C627B711}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataBaseClassLibrary", "DataBaseClassLibrary\DataBaseClassLibrary.csproj", "{5DD99363-CDFD-4821-AAF3-D98478A27331}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModelClassLibrary", "ModelClassLibrary\ModelClassLibrary.csproj", "{730980E3-789B-4BA5-95DB-856F869AE203}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TPM-TRAK_AnalyticsWebReports", "TPM-TRAK_AnalyticsWebReports\TPM-TRAK_AnalyticsWebReports\TPM-TRAK_AnalyticsWebReports.csproj", "{E047145E-B0D1-4E75-BCF4-405473593706}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{3BC77BB4-2703-4E58-96A6-BFEDE7D8EDEB}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5410EF58-C173-4042-8938-3291BC1CE84E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5410EF58-C173-4042-8938-3291BC1CE84E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5410EF58-C173-4042-8938-3291BC1CE84E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5410EF58-C173-4042-8938-3291BC1CE84E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C122516F-19D7-4D95-9C60-E1F9C627B711}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C122516F-19D7-4D95-9C60-E1F9C627B711}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C122516F-19D7-4D95-9C60-E1F9C627B711}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C122516F-19D7-4D95-9C60-E1F9C627B711}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5DD99363-CDFD-4821-AAF3-D98478A27331}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5DD99363-CDFD-4821-AAF3-D98478A27331}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5DD99363-CDFD-4821-AAF3-D98478A27331}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5DD99363-CDFD-4821-AAF3-D98478A27331}.Release|Any CPU.Build.0 = Release|Any CPU
+		{730980E3-789B-4BA5-95DB-856F869AE203}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{730980E3-789B-4BA5-95DB-856F869AE203}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{730980E3-789B-4BA5-95DB-856F869AE203}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{730980E3-789B-4BA5-95DB-856F869AE203}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E047145E-B0D1-4E75-BCF4-405473593706}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E047145E-B0D1-4E75-BCF4-405473593706}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E047145E-B0D1-4E75-BCF4-405473593706}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E047145E-B0D1-4E75-BCF4-405473593706}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FC0DF2A2-9E12-420B-A891-687EA357234C}
+	EndGlobalSection
+EndGlobal

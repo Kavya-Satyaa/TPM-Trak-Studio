@@ -1,0 +1,356 @@
+﻿/* Move down content because we have a fixed navbar that is 50px tall */
+body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Wrapping element */
+/* Set some basic padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Set widths on the form inputs since otherwise they're 100% wide */
+input[type="text"],
+input[type="password"] {
+    max-width: 280px;
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+    .jumbotron {
+        margin-top: 20px;
+    }
+    .body-content {
+        padding: 0;
+    }
+}
+
+
+
+.loaders-container {
+    padding: 0px;
+    margin: 0 auto;
+    width: 60px;
+    text-align: center;
+    font-size: 0;
+    background-color: transparent;
+}
+
+.loaders-container1 {
+    padding: 0px;
+    margin: 0 auto;
+    width: 60px;
+    text-align: left;
+    font-size: 0;
+    background-color: transparent;
+}
+
+.containerS {
+    position: relative;
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 0px;
+    width: 100%;
+    height: 60px;
+}
+
+.circle {
+    box-sizing: border-box;
+    width: 59px;
+    height: 59px;
+    border-radius: 100%;
+    border: 10px solid rgba(255, 255, 255, 0.2);
+    border-top-color: #FFF;
+    animation: spin 1s infinite linear;
+}
+
+
+.mk-spinner-pie {
+  content: "PDT";
+  display: inline-block;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 50%;
+  margin-top: -25px;
+  left: 50%;
+  margin-left: -25px;
+  z-index: 1;
+  background: transparent;
+  border-radius: 50%;
+  border: 25px solid;
+  border-color:  #FFCA28 #EEFF41 #00BCD4 #1DE9B6;
+  -moz-animation: rotate 1s infinite linear;
+  -webkit-animation: rotate 1s infinite linear;
+  animation: rotate 1s infinite linear;
+}
+
+.mk-spinner-pie-red {
+  content: "PDT";
+  display: inline-block;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 50%;
+  margin-top: -25px;
+  left: 50%;
+  margin-left: -25px;
+  z-index: 1;
+  background: transparent;
+  border-radius: 50%;
+  border: 25px solid;
+  border-color: red red red red;
+  -moz-animation: rotate 1s infinite linear;
+  -webkit-animation: rotate 0s infinite linear;
+  animation: fadeinout 1s infinite linear;
+}
+
+.mk-spinner-pie-blue {
+  content: "PDT";
+  display: inline-block;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 50%;
+  margin-top: -25px;
+  left: 50%;
+  margin-left: -25px;
+  z-index: 1;
+  background: transparent;
+  border-radius: 50%;
+  border: 25px solid;
+  border-color: blue blue blue blue; 
+  animation: fade 1s infinite linear;
+}
+
+@keyframes flickerAnimation {
+  0%, 100%   { opacity:1; }
+  50%  { opacity:0; }
+ 
+}
+
+@keyframes fade {
+  0%,100% { opacity: 0 }
+  50% { opacity: 1 }
+}
+
+@keyframes shake {
+    0%, 100% {transform: translateX(0);}
+    10%, 30%, 50%, 70%, 90% {transform: translateX(-10px);}
+    20%, 40%, 60%, 80% {transform: translateX(10px);}
+}
+
+@keyframes flash {
+    0%, 50%, 100% {opacity: 1;}
+    25%, 75% {opacity: 0;}
+}
+
+@keyframes fadeIn{
+     0%  
+      { opacity: .1; }
+  100% 
+  { opacity: 1; }
+
+}
+@keyframes fadeOut{
+     0%  
+      { opacity: 1; }
+  100% 
+  { opacity: .1; }
+
+}
+
+@keyframes bouncy {
+    40% {
+        height: 40px;
+    }
+
+    50% {
+        transform: translate(0, 65px);
+        height: 34px;
+        border-radius: 20px;
+    }
+
+    65% {
+        height: 40px;
+    }
+}
+
+@keyframes push {
+    50% {
+        left: 56px;
+    }
+}
+
+@keyframes slide {
+    50% {
+        margin-top: 25px;
+    }
+}
+
+@keyframes pulse {
+    50% {
+        border-width: 30px;
+    }
+}
+
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes cross {
+    50% {
+        margin-left: 60px;
+    }
+}
+
+@-moz-keyframes rotate {
+  0% {
+    -moz-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -moz-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotate {
+  0% {
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+
+
+/*!
+ * Load Awesome v1.1.0 (http://github.danielcardoso.net/load-awesome/)
+ * Copyright 2015 Daniel Cardoso <@DanielCardoso>
+ * Licensed under MIT
+ */
+.la-cog,
+.la-cog > div {
+    position: relative;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+.la-cog {
+    display: block;
+    font-size: 0;
+    color: #fff;
+}
+.la-cog.la-dark {
+    color: #333;
+}
+.la-cog > div {
+    display: inline-block;
+    float: none;
+    background-color: currentColor;
+    border: 0 solid currentColor;
+}
+.la-cog {
+    width: 31px;
+    height: 31px;
+}
+.la-cog > div {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border-style: dashed;
+    border-width: 2px;
+    border-radius: 100%;
+    /*-webkit-animation: cog-rotate 1s linear infinite;
+    -moz-animation: cog-rotate 1s linear infinite;
+     -o-animation: cog-rotate 1s linear infinite;
+      animation: rotate 2s linear infinite;*/
+}
+.la-cog > div:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: "";
+    border: 2px solid currentColor;
+    border-radius: 100%;
+}
+.la-cog.la-2x {
+    width: 40px;
+    height: 40px;
+}
+.la-cog.la-2x > div {
+    border-width: 4px;
+}
+.la-cog.la-2x > div:after {
+    border-width: 4px;
+}
+/*
+ * Animation
+ */
+@-webkit-keyframes cog-rotate {
+    0% {
+        -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+    }
+}
+@-moz-keyframes cog-rotate {
+    0% {
+        -moz-transform: rotate(0deg);
+             transform: rotate(0deg);
+    }
+    100% {
+        -moz-transform: rotate(360deg);
+             transform: rotate(360deg);
+    }
+}
+@-o-keyframes cog-rotate {
+    0% {
+        -o-transform: rotate(0deg);
+           transform: rotate(0deg);
+    }
+    100% {
+        -o-transform: rotate(360deg);
+           transform: rotate(360deg);
+    }
+}
+@keyframes cog-rotate {
+    0% {
+        -webkit-transform: rotate(0deg);
+           -moz-transform: rotate(0deg);
+             -o-transform: rotate(0deg);
+                transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+           -moz-transform: rotate(360deg);
+             -o-transform: rotate(360deg);
+                transform: rotate(360deg);
+    }
+}

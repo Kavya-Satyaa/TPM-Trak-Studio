@@ -1,0 +1,103 @@
+﻿/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    .settingCss {
+        font-weight: 900;
+        font-size: 35px;
+    }
+}
+
+/* Smartphones (landscape) ----------- */
+@media only screen and (min-width : 321px) {
+    .settingCss {
+        font-weight: 900;
+        font-size: 55px;
+    }
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width : 320px) {
+    .settingCss {
+        font-weight: 900;
+        font-size: 35px;
+    }
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+    .settingCss {
+        font-weight: 900;
+        font-size: 35px;
+    }
+}
+
+/* iPads (landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+    .settingCss {
+        font-weight: 900;
+        font-size: 45px;
+    }
+}
+
+/* iPads (portrait) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+    .settingCss {
+        font-weight: 900;
+        font-size: 35px;
+    }
+}
+
+/**********
+iPad 3
+**********/
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) and (-webkit-min-device-pixel-ratio : 2) {
+    .settingCss {
+        font-weight: 900;
+        font-size: 35px;
+    }
+}
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) and (-webkit-min-device-pixel-ratio : 2) {
+    .settingCss {
+        font-weight: 900;
+        font-size: 35px;
+    }
+}
+/* Desktops and laptops -----------1600*900 */
+@media only screen and (min-width : 1224px) {
+    .settingCss {
+        font-weight: 900;
+        font-size: 55px;
+    }
+}
+
+/* Large screens -----------1920*1080 */
+@media only screen and (min-width : 1824px) {
+    .settingCss {
+        font-weight: 900;
+        font-size: 100px;
+    }
+}
+
+/* iPhone 5 (portrait &amp; landscape)----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 568px) {
+    .settingCss {
+        font-weight: 900;
+        font-size: 35px;
+    }
+}
+
+/* iPhone 5 (landscape)----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 568px) and (orientation : landscape) {
+    .settingCss {
+        font-weight: 900;
+        font-size: 35px;
+    }
+}
+
+/* iPhone 5 (portrait)----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 568px) and (orientation : portrait) {
+    .settingCss {
+        font-weight: 900;
+        font-size: 35px;
+    }
+}

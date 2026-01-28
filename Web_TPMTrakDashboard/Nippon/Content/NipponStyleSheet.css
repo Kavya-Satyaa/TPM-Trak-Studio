@@ -1,0 +1,212 @@
+﻿body {
+}
+
+table thead th tbody tr {
+    width: 200px;
+    height: 50px;
+    font-size: 19px;
+    padding: 10px;
+    border-style: solid;
+    background-color: #2b2e4a;
+}
+
+.headerstyle2 {
+    width: 200px;
+    height: 50px;
+    vertical-align: central;
+    font-size: 19px;
+    padding: 10px;
+        border-style: solid;
+    border-color: black;
+    text-align: center;
+    background-color: #0d335d;
+    color: white;
+}
+
+.headerstyle3 {
+    width: 200px;
+    height: 50px;
+    vertical-align: central;
+    font-size: 45px;
+    padding: 10px;
+    border-style: solid;
+    border-color: black;
+    text-align: center;
+    background-color: #0d335d;
+    color: white;
+}
+
+.head{
+    width:100%;
+}
+
+.headerstyle {
+    width: 200px;
+    height: 70px;
+    vertical-align: central;
+    font-size: 19px;
+    padding: 10px;
+    font-size: 30px;
+    border-style: solid;
+    border-color: black;
+    text-align: center;
+    background-color: #4b778d;
+    color: white;
+}
+.headerstyleMac {
+    width: 200px;
+    height: 80px;
+    font-size: 30px;
+    vertical-align: central;
+    padding: 10px;
+    border-style: solid;
+    border-color: black;
+    text-align: center;
+    background-color: #4b778d;
+    color: white;
+}
+
+.rowstyle {
+    width: 200px;
+    height: 80px;
+    font-size: 30px;
+    padding: 10px;
+    border-style: solid;
+    vertical-align: central;
+    text-align: center;
+    border-width: 1px;
+    background-color: #8fd9a8;
+}
+
+.rowstyle1 {
+    width: 245px;
+    height: 80px;
+    font-size: 30px;
+    padding: 10px;
+    vertical-align: central;
+    border-style: solid;
+    text-align: center;
+    border-width: 2px;
+    background-color: #28b5b5;
+}
+
+.rowstyle2 {
+    width: 245px;
+    height: 50px;
+    font-size: 26px;
+    padding: 10px;
+    vertical-align: central;
+    border-style: solid;
+    text-align: center;
+    border-width: 1px;
+    background-color: #c1a1d3;
+}
+
+.divstyle {
+    width: 250px;
+    height: 150px;
+    font-size: 19px;
+    padding: 10px;
+    border-style: solid;
+    text-align: center;
+    border-width: 1px;
+    background-color: #AEAAAA;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    position: relative;
+    margin-bottom: 30px;
+    border: 1px solid #deebfd;
+    box-shadow: -8px 12px 18px 0 #dadee8;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+    border-radius: 24px;
+    margin: 10px;
+}
+
+.card-head {
+    border-radius: 2px 2px 0 0;
+    /*border-bottom: 1px dotted rgba(0, 0, 0, 0.2);*/
+    padding: 2px;
+    text-transform: uppercase;
+    color: #3a405b;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 40px;
+    min-height: 40px;
+}
+
+    .card-head .tools {
+        padding-right: 16px;
+        float: right;
+        margin-top: 7px;
+        margin-bottom: 7px;
+        margin-left: 24px;
+        line-height: normal;
+        vertical-align: middle;
+    }
+
+        .card-head .tools .btn-color {
+            color: #97a0b3;
+            margin-right: 3px;
+            font-size: 12px;
+        }
+
+.row {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(var(--bs-gutter-y) * -1);
+    margin-right: calc(var(--bs-gutter-x)/ -2);
+    margin-left: calc(var(--bs-gutter-x)/ -2);
+}
+
+.card-head header {
+    display: inline-block;
+    padding: 11px 20px;
+    vertical-align: middle;
+    line-height: 17px;
+    font-size: 20px;
+}
+
+table.dataTable {
+    clear: both;
+    margin-top: 6px !important;
+    margin-bottom: 6px !important;
+    max-width: none !important;
+    border-collapse: separate !important;
+}
+
+.table {
+    --bs-table-bg: transparent;
+    --bs-table-striped-color: #212529;
+    --bs-table-striped-bg: rgba(0, 0, 0, 0.05);
+    --bs-table-active-color: #212529;
+    --bs-table-active-bg: rgba(0, 0, 0, 0.1);
+    --bs-table-hover-color: #212529;
+    --bs-table-hover-bg: rgba(0, 0, 0, 0.075);
+    width: 100%;
+    margin-bottom: 1rem;
+    color: #212529;
+    vertical-align: top;
+    border-color: #dee2e6;
+    border-bottom-color: rgb(222, 226, 230);
+}
+
+element {
+    width: 1303px;
+}
+
+table.dataTable.no-footer {
+    border-bottom-color: #e7ecf1;
+}

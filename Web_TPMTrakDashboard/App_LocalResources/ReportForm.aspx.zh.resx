@@ -1,0 +1,270 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="btnCancelResource1.ToolTip" xml:space="preserve">
+    <value>取消</value>
+  </data>
+  <data name="btnGenerateResource1.Text" xml:space="preserve">
+    <value>生成</value>
+  </data>
+  <data name="btnGenerateResource1.ToolTip" xml:space="preserve">
+    <value>生成</value>
+  </data>
+  <data name="Format" xml:space="preserve">
+    <value>格式</value>
+  </data>
+  <data name="ListItemResource1.Text" xml:space="preserve">
+    <value>生产报告 - 机床</value>
+  </data>
+  <data name="ListItemResource1.Value" xml:space="preserve">
+    <value>ProductionReportMachinewise</value>
+  </data>
+  <data name="ListItemResource2.Text" xml:space="preserve">
+    <value>生产报告 - 工件</value>
+  </data>
+  <data name="ListItemResource2.Value" xml:space="preserve">
+    <value>ProductionReportComponentwise</value>
+  </data>
+  <data name="ListItemResource3.Text" xml:space="preserve">
+    <value>停机时间报告</value>
+  </data>
+  <data name="ListItemResource3.Value" xml:space="preserve">
+    <value>DowntimeReport</value>
+  </data>
+  <data name="ListItemResource4.Text" xml:space="preserve">
+    <value>生产及停机报告 - 机床</value>
+  </data>
+  <data name="ListItemResource4.Value" xml:space="preserve">
+    <value>ProductionAndDowntimeReportMachinewise</value>
+  </data>
+  <data name="ListItemResource5.Text" xml:space="preserve">
+    <value>生产及停机报告 - 按时每天</value>
+  </data>
+  <data name="ListItemResource5.Value" xml:space="preserve">
+    <value>ProductionAndDowntimeReportDailyByHour</value>
+  </data>
+  <data name="PageResource1.Title" xml:space="preserve">
+    <value>報表</value>
+  </data>
+  <data name="Report" xml:space="preserve">
+    <value>报告</value>
+  </data>
+  <data name="Report Type" xml:space="preserve">
+    <value>报告类型</value>
+  </data>
+  <data name="Type" xml:space="preserve">
+    <value>类型</value>
+  </data>
+  <data name="Component ID" xml:space="preserve">
+    <value>工件ID</value>
+  </data>
+  <data name="Down ID" xml:space="preserve">
+    <value>停机ID</value>
+  </data>
+  <data name="Operation No." xml:space="preserve">
+    <value>报表</value>
+  </data>
+  <data name="Show Top Down Reasons" xml:space="preserve">
+    <value>显示最高停机原因</value>
+  </data>
+  <data name="Exclude" xml:space="preserve">
+    <value>排除</value>
+  </data>
+  <data name="ListItemResourceFormat1.Text" xml:space="preserve">
+    <value>格式 -  1（主显示数据报告）</value>
+  </data>
+  <data name="ListItemResourceFormat2.Text" xml:space="preserve">
+    <value>格式 -  1</value>
+  </data>
+  <data name="ListItemResourceFormat3.Text" xml:space="preserve">
+    <value>格式 -  1（EXCEL）</value>
+  </data>
+  <data name="ListItemResourceFormat4.Text" xml:space="preserve">
+    <value>OEE图形报告</value>
+  </data>
+  <data name="ListItemResourceReasons1.Text" xml:space="preserve">
+    <value>Top 1</value>
+  </data>
+  <data name="ListItemResourceReasons10.Text" xml:space="preserve">
+    <value>Top 10</value>
+  </data>
+  <data name="ListItemResourceReasons2.Text" xml:space="preserve">
+    <value>Top 2</value>
+  </data>
+  <data name="ListItemResourceReasons3.Text" xml:space="preserve">
+    <value>Top 3</value>
+  </data>
+  <data name="ListItemResourceReasons4.Text" xml:space="preserve">
+    <value>Top 4</value>
+  </data>
+  <data name="ListItemResourceReasons5.Text" xml:space="preserve">
+    <value>Top 5</value>
+  </data>
+  <data name="ListItemResourceReasons6.Text" xml:space="preserve">
+    <value>Top 6</value>
+  </data>
+  <data name="ListItemResourceReasons7.Text" xml:space="preserve">
+    <value>Top 7</value>
+  </data>
+  <data name="ListItemResourceReasons8.Text" xml:space="preserve">
+    <value>Top 8</value>
+  </data>
+  <data name="ListItemResourceReasons9.Text" xml:space="preserve">
+    <value>Top 9</value>
+  </data>
+  <data name="ListItemResourceTimeFormat1.Text" xml:space="preserve">
+    <value>hh:mm:ss</value>
+  </data>
+  <data name="ListItemResourceTimeFormat2.Text" xml:space="preserve">
+    <value>hh</value>
+  </data>
+  <data name="ListItemResourceTimeFormat3.Text" xml:space="preserve">
+    <value>mm</value>
+  </data>
+  <data name="ListItemResourceTimeFormat4.Text" xml:space="preserve">
+    <value>ss</value>
+  </data>
+  <data name="ListItemResourceType1.Text" xml:space="preserve">
+    <value>小时</value>
+  </data>
+  <data name="ListItemResourceType2.Text" xml:space="preserve">
+    <value>班次</value>
+  </data>
+  <data name="ListItemResourceType3.Text" xml:space="preserve">
+    <value>每日</value>
+  </data>
+  <data name="ListItemResourceType4.Text" xml:space="preserve">
+    <value>时间 - 合并</value>
+  </data>
+  <data name="ListItemResourceType5.Text" xml:space="preserve">
+    <value>机床停机时间细节</value>
+  </data>
+  <data name="ListItemResourceType6.Text" xml:space="preserve">
+    <value>机床停机时间矩阵</value>
+  </data>
+  <data name="ListItemResourceFormat5.Text" xml:space="preserve">
+    <value>格式 -  3</value>
+  </data>
+  <data name="PleaseSelectReportType" xml:space="preserve">
+    <value>请选择报告类型 !</value>
+  </data>
+  <data name="ListItemResourceType7.Text" xml:space="preserve">
+    <value>生产和下馅饼</value>
+  </data>
+</root>

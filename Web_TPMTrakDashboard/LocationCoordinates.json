@@ -1,0 +1,332 @@
+﻿{
+  "Location1": {
+    "coords": {
+      "lat": 17.6805,
+      "lng": 74.0183
+    },
+    "name": "Satara",
+    "iconImage": "https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png",
+    "content": "<strong>Satara, Maharashtra</strong><br><strong>No. of Machines : </strong>3<br>"
+  },
+
+  "Location2": {
+    "coords": {
+      "lat": 19.8762,
+      "lng": 75.3433
+    },
+    "name": "Aurangabad",
+    "iconImage": "https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png",
+    "content": "<strong>Aurangabad, Maharashtra</strong><br><strong>No. of Machines : </strong>10<br>"
+  },
+
+  "Location3": {
+    "coords": {
+      "lat": 21.1702,
+      "lng": 72.8311
+    },
+    "name": "Surat",
+    "iconImage": "https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png",
+    "content": "<strong>Surat, Gujarat</strong><br><strong>No. of Machines : </strong>13<br>"
+  },
+
+  "Location4": {
+    "coords": {
+      "lat": 13.0827,
+      "lng": 80.2707
+    },
+    "name": "Chennai",
+    "iconImage": "https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png",
+    "content": "<strong>Chennai, Tamilnadu</strong><br><strong>No. of Machines : </strong>35<br>"
+  },
+
+  "Location5": {
+    "coords": {
+      "lat": 28.4595,
+      "lng": 77.0266
+    },
+    "name": "Gurugram",
+    "iconImage": "https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png",
+    "content": "<strong>Gurugram, Haryana</strong><br><strong>No. of Machines : </strong>10<br>"
+  },
+
+  "Location6": {
+    "coords": {
+      "lat": 18.5204,
+      "lng": 73.8567
+    },
+    "name": "Pune",
+    "iconImage": "https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png",
+    "content": "<strong>Pune, Maharashtra</strong><br><strong>No. of Machines : </strong>15<br>"
+  },
+
+  "Location7": {
+    "coords": {
+      "lat": 19.0760,
+      "lng": 72.8777
+    },
+    "name": "Mumbai",
+    "iconImage": "https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png",
+    "content": "<strong>Mumbai, Maharashtra</strong><br><strong>No. of Machines : </strong>5<br>"
+  },
+
+  "Location8": {
+    "coords": {
+      "lat": 22.3039,
+      "lng": 70.8022
+    },
+    "name": "Rajkot",
+    "iconImage": "https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png",
+    "content": "<strong>Rajkot, Gujarat</strong><br><strong>No. of Machines : </strong>4<br>"
+  },
+
+  "Location9": {
+    "coords": {
+      "lat": 23.0225,
+      "lng": 72.5714
+    },
+    "name": "Ahmedabad",
+    "iconImage": "https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png",
+    "content": "<strong>Ahmedabad, Gujarat</strong><br><strong>No. of Machines : </strong>3<br>"
+  },
+
+  "Location10": {
+    "coords": {
+      "lat": 13.8185,
+      "lng": 77.4989
+    },
+    "name": "Hindupur",
+    "iconImage": "https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png",
+    "content": "<strong>Hindupur, Andhra Pradesh</strong><br><strong>No. of Machines : </strong>3<br>"
+  },
+
+  "Location11": {
+    "coords": {
+      "lat": 12.7409,
+      "lng": 77.8253
+    },
+    "name": "Hosur",
+    "iconImage": "https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png",
+    "content": "<strong>Hosur, Tamilnadu</strong><br><strong>No. of Machines : </strong>2<br>"
+  },
+
+  "Location12": {
+    "coords": {
+      "lat": 22.5726,
+      "lng": 88.3639
+    },
+    "name": "Kolkata",
+    "iconImage": "https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png",
+    "content": "<strong>Kolkata, West Bengal</strong><br><strong>No. of Machines : </strong>4<br>"
+  },
+
+  "Location13": {
+    "coords": {
+      "lat": 10.7905,
+      "lng": 78.7047
+    },
+    "name": "Trichy",
+    "iconImage": "https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png",
+    "content": "<strong>Trichy, Tamilnadu</strong><br><strong>No. of Machines : </strong>4<br>"
+  },
+
+  "Location14": {
+    "coords": {
+      "lat": 22.7196,
+      "lng": 75.8577
+    },
+    "name": "Indore",
+    "iconImage": "https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png",
+    "content": "<strong>Indore, Madhya Pradesh</strong><br><strong>No. of Machines : </strong>3<br>"
+  },
+
+  "Location15": {
+    "coords": {
+      "lat": 16.7050,
+      "lng": 74.2433
+    },
+    "name": "Kolhapur",
+    "iconImage": "https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png",
+    "content": "<strong>Kolhapur, Maharashtra</strong><br><strong>No. of Machines : </strong>5<br>"
+  },
+
+  "Location16": {
+    "coords": {
+      "lat": 19.9975,
+      "lng": 73.7898
+    },
+    "name": "Nashik",
+    "iconImage": "https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png",
+    "content": "<strong>Nashik, Maharashtra</strong><br><strong>No. of Machines : </strong>5<br>"
+  },
+
+  "Location17": {
+    "coords": {
+      "lat": 30.9010,
+      "lng": 75.8573
+    },
+    "name": "Ludhiana",
+    "iconImage": "https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png",
+    "content": "<strong>Ludhiana, Punjab</strong><br><strong>No. of Machines : </strong>2<br>"
+  },
+
+  "Location18": {
+    "coords": {
+      "lat": 39.9042,
+      "lng": 116.4074
+    },
+    "name": "Beijing",
+    "iconImage": "https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png",
+    "content": "<strong>Beijing, China</strong><br><strong>No. of Machines : </strong>12<br>"
+  },
+
+  "Location19": {
+    "coords": {
+      "lat": 35.6895,
+      "lng": 139.6917
+    },
+    "name": "Tokyo",
+    "iconImage": "https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png",
+    "content": "<strong>Tokyo, Japan</strong><br><strong>No. of Machines : </strong>8<br>"
+  },
+
+  "Location20": {
+    "coords": {
+      "lat": 6.9271,
+      "lng": 79.8612
+    },
+    "name": "Colombo",
+    "iconImage": "https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png",
+    "content": "<strong>Colombo, Sri Lanka</strong><br><strong>No. of Machines : </strong>6<br>"
+  },
+
+  "Location21": {
+    "coords": {
+      "lat": 59.9343,
+      "lng": 30.3351
+    },
+    "name": "St. Petersburg",
+    "iconImage": "https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png",
+    "content": "<strong>St. Petersburg, Russia</strong><br><strong>No. of Machines : </strong>10<br>"
+  },
+
+  "Location22": {
+    "coords": {
+      "lat": -23.186437,
+      "lng": 144.295072
+    },
+    "name": "Queensland",
+    "iconImage": "https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png",
+    "content": "<strong>Queensland, Australia</strong><br><strong>No. of Machines : </strong>4<br>"
+  },
+
+  "Location23": {
+    "coords": {
+      "lat": 43.653357,
+      "lng": -79.354815
+    },
+    "name": "Toronto",
+    "iconImage": "https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png",
+    "content": "<strong>Toronto, Canada</strong><br><strong>No. of Machines : </strong>14<br>"
+  },
+
+  "Location24": {
+    "coords": {
+      "lat": 34.049919,
+      "lng": -118.237477
+    },
+    "name": "Los Angeles",
+    "iconImage": "https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png",
+    "content": "<strong>Los Angeles, USA</strong><br><strong>No. of Machines : </strong>13<br>"
+  },
+
+  "Location25": {
+    "coords": {
+      "lat": 41.8781,
+      "lng": -87.6298
+    },
+    "name": "Chicago",
+    "iconImage": "https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png",
+    "content": "<strong>Chicago, USA</strong><br><strong>No. of Machines : </strong>11<br>"
+  },
+
+  "Location26": {
+    "coords": {
+      "lat": 45.4642,
+      "lng": 9.1900
+    },
+    "name": "Milan",
+    "iconImage": "https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png",
+    "content": "<strong>Milan, Italy</strong><br><strong>No. of Machines : </strong>9<br>"
+  },
+
+  "Location27": {
+    "coords": {
+      "lat": 52.5200,
+      "lng": 13.4050
+    },
+    "name": "Berlin",
+    "iconImage": "https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png",
+    "content": "<strong>Berlin, Germany</strong><br><strong>No. of Machines : </strong>7<br>"
+  },
+
+  "Location28": {
+    "coords": {
+      "lat": 12.944000,
+      "lng": 77.605310
+    },
+    "name": "Bosch, Adugodi",
+    "iconImage": "https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png",
+    "content": "<strong>Adugodi, Bengaluru</strong><br><strong>No. of Machines : </strong>20<br>"
+  },
+
+  "Location29": {
+    "coords": {
+      "lat": 12.796888,
+      "lng": 77.423775
+    },
+    "name": "Bosch, Bidadi",
+    "iconImage": "https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png",
+    "content": "<strong>Bidadi, Bengaluru</strong><br><strong>No. of Machines : </strong>10<br>"
+  },
+
+  "Location30": {
+    "coords": {
+      "lat": 13.034374,
+      "lng": 77.513479
+    },
+    "name": "Ace Designers, Peenya",
+    "dbname": "IMTEX2019",
+    "iconImage": "https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png",
+    "content": "<strong>Peenya, Bengaluru</strong><br><strong>No. of Machines : </strong>25<br>"
+  },
+
+  "Location31": {
+    "coords": {
+      "lat": 12.823839,
+      "lng": 77.679515
+    },
+    "name": "KAPL, Bommansandra",
+    "iconImage": "https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png",
+    "content": "<strong>Bommansandra, Bengaluru</strong><br><strong>No. of Machines : </strong>15<br>"
+  },
+
+  "Location32": {
+    "coords": {
+      "lat": 12.790605,
+      "lng": 77.659131
+    },
+    "name": "Trelleborg, Jigani",
+    "iconImage": "https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png",
+    "content": "<strong>Jigani, Bengaluru</strong><br><strong>No. of Machines : </strong>80<br>"
+  },
+
+  "Location33": {
+    "coords": {
+      "lat": 12.815663,
+      "lng": 77.674893
+    },
+    "name": "Bill Forge, Bommansandra",
+    "iconImage": "https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png",
+    "content": "<strong>Bommansandra, Bengaluru</strong><br><strong>No. of Machines : </strong>50<br>"
+  }
+}

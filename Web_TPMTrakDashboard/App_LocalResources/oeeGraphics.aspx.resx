@@ -1,0 +1,372 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="btnRefreshResource1.Text" xml:space="preserve">
+    <value>Refresh</value>
+  </data>
+  <data name="btnRefreshResource1.ToolTip" xml:space="preserve">
+    <value>Refresh</value>
+  </data>
+  <data name="ddlMachineIdResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblAEMinResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblAEMinResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblAEResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblAEResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblDTMinResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblDTMinResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblDTResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblDTResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblEOTMinResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblEOTMinResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblEOTResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblEOTResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblMessagesResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblMessagesResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblNOTMinResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblNOTMinResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblNOTResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblNOTResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblOEEMinResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblOEEMinResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblOEEResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblOEEResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblOTMinResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblOTMinResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblPEMinResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblPEMinResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblPEResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblPEResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblPLMinResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblPLMinResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblPLResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblPLResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblPPTMinResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblPPTMinResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblPPTResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblPPTResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblSLMinResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblSLMinResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblSLResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblSLResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblTTMinResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblTTMinResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblTTResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblTTResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="PageResource1.Title" xml:space="preserve">
+    <value>oeeGraphics</value>
+  </data>
+  <data name="txtFromDateResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtFromDateResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtToDateResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtToDateResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="AEOT(OTDT)" xml:space="preserve">
+    <value>AE=OT/(OT+DT)</value>
+  </data>
+  <data name="AvailabilityEfficiency(AE)" xml:space="preserve">
+    <value>Availability Efficiency(AE)</value>
+  </data>
+  <data name="CustomSearch" xml:space="preserve">
+    <value>Custom Search</value>
+  </data>
+  <data name="DateLang" xml:space="preserve">
+    <value>en</value>
+  </data>
+  <data name="DTPPTOT" xml:space="preserve">
+    <value>DT=PPT-OT</value>
+  </data>
+  <data name="EffectiveOperatingTime(EOT)" xml:space="preserve">
+    <value>EffectiveOperatingTime(EOT)</value>
+  </data>
+  <data name="EOTOTSL" xml:space="preserve">
+    <value>EOT=OT-SL</value>
+  </data>
+  <data name="FromTimeToTime" xml:space="preserve">
+    <value>TT=ToTime-FromTime</value>
+  </data>
+  <data name="MachineID" xml:space="preserve">
+    <value>Machine ID</value>
+  </data>
+  <data name="mins" xml:space="preserve">
+    <value>[mins.]</value>
+  </data>
+  <data name="NetOperatingTime(NOT)" xml:space="preserve">
+    <value>Net Operating Time (NOT)</value>
+  </data>
+  <data name="NOTOTSL" xml:space="preserve">
+    <value>NOT=OT-SL</value>
+  </data>
+  <data name="OEEEOTPPT" xml:space="preserve">
+    <value>OEE=AE*PE*QE</value>
+  </data>
+  <data name="OperatingTime(OT)" xml:space="preserve">
+    <value>Operating Time (OT)</value>
+  </data>
+  <data name="OverAllEfficiency(OEE)" xml:space="preserve">
+    <value>Over All Efficiency (OEE)</value>
+  </data>
+  <data name="PENOTOT" xml:space="preserve">
+    <value>PE=CN/OT</value>
+  </data>
+  <data name="PlannedLosses(PL)" xml:space="preserve">
+    <value>Planned Losses (PL)</value>
+  </data>
+  <data name="PlannedProcedureTime(PPT)" xml:space="preserve">
+    <value>Planned Production Time (PPT)</value>
+  </data>
+  <data name="PLTTOTDT" xml:space="preserve">
+    <value>PL=TT-(OT+DT)</value>
+  </data>
+  <data name="PPTTLPL" xml:space="preserve">
+    <value>PPT=TT-PL</value>
+  </data>
+  <data name="ProductionEfficiency(PE)" xml:space="preserve">
+    <value>Production Efficiency (PE)</value>
+  </data>
+  <data name="SLOTNOT" xml:space="preserve">
+    <value />
+  </data>
+  <data name="SpeedLoss(SL)" xml:space="preserve">
+    <value>Summation of Standard Time (CN)</value>
+  </data>
+  <data name="Stoppage(DT)" xml:space="preserve">
+    <value>Stoppage (DT)</value>
+  </data>
+  <data name="ToDate" xml:space="preserve">
+    <value>To Date</value>
+  </data>
+  <data name="TotalTime(TT)" xml:space="preserve">
+    <value>Total Time (TT)</value>
+  </data>
+  <data name="UtilizedTime" xml:space="preserve">
+    <value>Utilized Time</value>
+  </data>
+  <data name="UtilizedTimeforAllComponents" xml:space="preserve">
+    <value>Utilized Time for All Components</value>
+  </data>
+  <data name="From" xml:space="preserve">
+    <value>From</value>
+  </data>
+  <data name="OEEGraphics" xml:space="preserve">
+    <value>OEE Graphics</value>
+  </data>
+  <data name="QEOTPPT" xml:space="preserve">
+    <value>QE = ( Components - Rejection) / Components</value>
+  </data>
+  <data name="QualityEfficiency(QE)" xml:space="preserve">
+    <value>Quality Efficiency (QE)</value>
+  </data>
+</root>

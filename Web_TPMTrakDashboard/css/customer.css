@@ -1,0 +1,126 @@
+﻿
+
+@media screen and (min-width: 1400px) {
+    .commanDrop {
+        width: 100px;
+        height: 40px;
+    }
+
+    .commandateTxt {
+        height: 40px;
+        width: 70px;
+    }
+
+    .plantDrop {
+        height: 40px;
+    }
+
+    .btn-default {
+        height: 40px;
+    }
+
+    .searchText {
+        width: 120px;
+    }
+
+    .dashboardTbl {
+        max-height: 370px;
+        min-height: 300px;
+    }
+
+}
+
+@media screen and (min-width: 1280px) {
+    .commanDrop {
+        width: 120px;
+        height: 40px;
+    }
+
+    .commandateTxt {
+        height: 40px;
+        width: 70px;
+    }
+
+    .plantDrop {
+        height: 40px;
+    }
+
+    .btn-default {
+        height: 40px;
+    }
+
+    .searchText {
+        width: 150px;
+    }
+
+    .dashboardTbl {
+        max-height: 300px;
+        min-height: 300px;
+    }
+
+    .tblsize {
+        font-size: 20px;
+    }
+  
+}
+
+@media screen and (min-width: 1600px) {
+    .commanDrop {
+        width: 120px;
+        height: 40px;
+    }
+
+    .commandateTxt {
+        height: 40px;
+        width: 70px;
+    }
+
+    .plantDrop {
+        height: 40px;
+    }
+
+    .btn-default {
+        height: 40px;
+    }
+
+    .searchText {
+        width: 150px;
+    }
+
+    .dashboardTbl {
+        max-height: 370px;
+        min-height: 300px;
+    }
+   
+}
+
+@media screen and (min-width: 1920px) {
+    .commanDrop {
+        width: 120px;
+        height: 40px;
+    }
+
+    .commandateTxt {
+        height: 40px;
+        width: 70px;
+    }
+
+    .plantDrop {
+        height: 40px;
+    }
+
+    .btn-default {
+        height: 40px;
+    }
+
+    .searchText {
+        width: 150px;
+    }
+
+    .dashboardTbl {
+        max-height: 370px;
+        min-height: 300px;
+    }
+   
+}
+/*--------Block Cuntain----------------------*/

@@ -1,0 +1,384 @@
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Vollkorn';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Vollkorn Italic'), local('Vollkorn-Italic'), url(https://fonts.gstatic.com/s/vollkorn/v8/AVAOLdRSMkCUZzfhFRStsCEAvth_LlrfE80CYdSH47w.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Vollkorn';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Vollkorn Italic'), local('Vollkorn-Italic'), url(https://fonts.gstatic.com/s/vollkorn/v8/A1E_4AyeFrdYX0KDsHtlxiEAvth_LlrfE80CYdSH47w.woff2) format('woff2');
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek */
+@font-face {
+  font-family: 'Vollkorn';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Vollkorn Italic'), local('Vollkorn-Italic'), url(https://fonts.gstatic.com/s/vollkorn/v8/tsxazL42C1SUznv3IWZ6xSEAvth_LlrfE80CYdSH47w.woff2) format('woff2');
+  unicode-range: U+0370-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Vollkorn';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Vollkorn Italic'), local('Vollkorn-Italic'), url(https://fonts.gstatic.com/s/vollkorn/v8/edHsG-qE58xIueF1PEoO-iEAvth_LlrfE80CYdSH47w.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Vollkorn';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Vollkorn Italic'), local('Vollkorn-Italic'), url(https://fonts.gstatic.com/s/vollkorn/v8/YjrALFuIVGWYfvl87ebC8SEAvth_LlrfE80CYdSH47w.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Vollkorn';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Vollkorn Italic'), local('Vollkorn-Italic'), url(https://fonts.gstatic.com/s/vollkorn/v8/Oiz0tNwvC-Nd29SBQWfWTPk_vArhqVIZ0nv9q090hN8.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2212, U+2215;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Vollkorn';
+  font-style: italic;
+  font-weight: 600;
+  src: local('Vollkorn SemiBold Italic'), local('Vollkorn-SemiBoldItalic'), url(https://fonts.gstatic.com/s/vollkorn/v8/dU1kkg9Vvuo527vzySfgDIisI9EG050reXkJRbApsgE.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Vollkorn';
+  font-style: italic;
+  font-weight: 600;
+  src: local('Vollkorn SemiBold Italic'), local('Vollkorn-SemiBoldItalic'), url(https://fonts.gstatic.com/s/vollkorn/v8/dU1kkg9Vvuo527vzySfgDK2rAPV-9ExGJs04MAMGhqA.woff2) format('woff2');
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek */
+@font-face {
+  font-family: 'Vollkorn';
+  font-style: italic;
+  font-weight: 600;
+  src: local('Vollkorn SemiBold Italic'), local('Vollkorn-SemiBoldItalic'), url(https://fonts.gstatic.com/s/vollkorn/v8/dU1kkg9Vvuo527vzySfgDKP0faohFaKTjy1VHWRT0bA.woff2) format('woff2');
+  unicode-range: U+0370-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Vollkorn';
+  font-style: italic;
+  font-weight: 600;
+  src: local('Vollkorn SemiBold Italic'), local('Vollkorn-SemiBoldItalic'), url(https://fonts.gstatic.com/s/vollkorn/v8/dU1kkg9Vvuo527vzySfgDFLC-HPhLC5XMyyJ-BGMvF4.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Vollkorn';
+  font-style: italic;
+  font-weight: 600;
+  src: local('Vollkorn SemiBold Italic'), local('Vollkorn-SemiBoldItalic'), url(https://fonts.gstatic.com/s/vollkorn/v8/dU1kkg9Vvuo527vzySfgDIW5M0nk1V9I9cDKlK12wzw.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Vollkorn';
+  font-style: italic;
+  font-weight: 600;
+  src: local('Vollkorn SemiBold Italic'), local('Vollkorn-SemiBoldItalic'), url(https://fonts.gstatic.com/s/vollkorn/v8/dU1kkg9Vvuo527vzySfgDKVlZKEoJGujTpfWnQT9bUY.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2212, U+2215;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Vollkorn';
+  font-style: italic;
+  font-weight: 700;
+  src: local('Vollkorn Bold Italic'), local('Vollkorn-BoldItalic'), url(https://fonts.gstatic.com/s/vollkorn/v8/KNiAlx6phRqXCwnZZG51JOde9INZm0R8ZMJUtfOsxrw.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Vollkorn';
+  font-style: italic;
+  font-weight: 700;
+  src: local('Vollkorn Bold Italic'), local('Vollkorn-BoldItalic'), url(https://fonts.gstatic.com/s/vollkorn/v8/KNiAlx6phRqXCwnZZG51JLpHcMS0zZe4mIYvDKG2oeM.woff2) format('woff2');
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek */
+@font-face {
+  font-family: 'Vollkorn';
+  font-style: italic;
+  font-weight: 700;
+  src: local('Vollkorn Bold Italic'), local('Vollkorn-BoldItalic'), url(https://fonts.gstatic.com/s/vollkorn/v8/KNiAlx6phRqXCwnZZG51JDyJJ3dJfU6-XWVNf-DPRbs.woff2) format('woff2');
+  unicode-range: U+0370-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Vollkorn';
+  font-style: italic;
+  font-weight: 700;
+  src: local('Vollkorn Bold Italic'), local('Vollkorn-BoldItalic'), url(https://fonts.gstatic.com/s/vollkorn/v8/KNiAlx6phRqXCwnZZG51JDh33M2A-6X0bdu871ruAGs.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Vollkorn';
+  font-style: italic;
+  font-weight: 700;
+  src: local('Vollkorn Bold Italic'), local('Vollkorn-BoldItalic'), url(https://fonts.gstatic.com/s/vollkorn/v8/KNiAlx6phRqXCwnZZG51JBHJTnCUrjaAm2S9z52xC3Y.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Vollkorn';
+  font-style: italic;
+  font-weight: 700;
+  src: local('Vollkorn Bold Italic'), local('Vollkorn-BoldItalic'), url(https://fonts.gstatic.com/s/vollkorn/v8/KNiAlx6phRqXCwnZZG51JIWiMMZ7xLd792ULpGE4W_Y.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2212, U+2215;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Vollkorn';
+  font-style: italic;
+  font-weight: 900;
+  src: local('Vollkorn Black Italic'), local('Vollkorn-BlackItalic'), url(https://fonts.gstatic.com/s/vollkorn/v8/5fOn_dOVwBIkZpOP3_1I76vmtpDkVk8Ra82A8AL7V0Q.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Vollkorn';
+  font-style: italic;
+  font-weight: 900;
+  src: local('Vollkorn Black Italic'), local('Vollkorn-BlackItalic'), url(https://fonts.gstatic.com/s/vollkorn/v8/5fOn_dOVwBIkZpOP3_1I7xM_lnCtUATOqR8j0WRFbzk.woff2) format('woff2');
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek */
+@font-face {
+  font-family: 'Vollkorn';
+  font-style: italic;
+  font-weight: 900;
+  src: local('Vollkorn Black Italic'), local('Vollkorn-BlackItalic'), url(https://fonts.gstatic.com/s/vollkorn/v8/5fOn_dOVwBIkZpOP3_1I71y9nchg3Czi84wUNeUBCDE.woff2) format('woff2');
+  unicode-range: U+0370-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Vollkorn';
+  font-style: italic;
+  font-weight: 900;
+  src: local('Vollkorn Black Italic'), local('Vollkorn-BlackItalic'), url(https://fonts.gstatic.com/s/vollkorn/v8/5fOn_dOVwBIkZpOP3_1I7-4NfmXkMoD31PGgz7X31CU.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Vollkorn';
+  font-style: italic;
+  font-weight: 900;
+  src: local('Vollkorn Black Italic'), local('Vollkorn-BlackItalic'), url(https://fonts.gstatic.com/s/vollkorn/v8/5fOn_dOVwBIkZpOP3_1I78vbOpOevl3wWYjwFvepnDU.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Vollkorn';
+  font-style: italic;
+  font-weight: 900;
+  src: local('Vollkorn Black Italic'), local('Vollkorn-BlackItalic'), url(https://fonts.gstatic.com/s/vollkorn/v8/5fOn_dOVwBIkZpOP3_1I78jsb7Oq0o-uqUFW7Ygu5rM.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2212, U+2215;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Vollkorn';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Vollkorn Regular'), local('Vollkorn-Regular'), url(https://fonts.gstatic.com/s/vollkorn/v8/bUXtAi_Ej0uk-Sx_m2pZoBTbgVql8nDJpwnrE27mub0.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Vollkorn';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Vollkorn Regular'), local('Vollkorn-Regular'), url(https://fonts.gstatic.com/s/vollkorn/v8/8qUGe4hVstHI2y7aoarZMBTbgVql8nDJpwnrE27mub0.woff2) format('woff2');
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek */
+@font-face {
+  font-family: 'Vollkorn';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Vollkorn Regular'), local('Vollkorn-Regular'), url(https://fonts.gstatic.com/s/vollkorn/v8/HzLiYQCctgLaOPEHTib5JhTbgVql8nDJpwnrE27mub0.woff2) format('woff2');
+  unicode-range: U+0370-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Vollkorn';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Vollkorn Regular'), local('Vollkorn-Regular'), url(https://fonts.gstatic.com/s/vollkorn/v8/FGyERBbJzxe9DyIbwfBHIhTbgVql8nDJpwnrE27mub0.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Vollkorn';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Vollkorn Regular'), local('Vollkorn-Regular'), url(https://fonts.gstatic.com/s/vollkorn/v8/V4Paz3PKKtqUOmfQbF3_WBTbgVql8nDJpwnrE27mub0.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Vollkorn';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Vollkorn Regular'), local('Vollkorn-Regular'), url(https://fonts.gstatic.com/s/vollkorn/v8/idGKtgpe38okB6bfeHMsLPesZW2xOQ-xsNqO47m55DA.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2212, U+2215;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Vollkorn';
+  font-style: normal;
+  font-weight: 600;
+  src: local('Vollkorn SemiBold'), local('Vollkorn-SemiBold'), url(https://fonts.gstatic.com/s/vollkorn/v8/fuCAi9VgWC7hEVCJDaiIRDTOQ_MqJVwkKsUn0wKzc2I.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Vollkorn';
+  font-style: normal;
+  font-weight: 600;
+  src: local('Vollkorn SemiBold'), local('Vollkorn-SemiBold'), url(https://fonts.gstatic.com/s/vollkorn/v8/fuCAi9VgWC7hEVCJDaiIRDUj_cnvWIuuBMVgbX098Mw.woff2) format('woff2');
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek */
+@font-face {
+  font-family: 'Vollkorn';
+  font-style: normal;
+  font-weight: 600;
+  src: local('Vollkorn SemiBold'), local('Vollkorn-SemiBold'), url(https://fonts.gstatic.com/s/vollkorn/v8/fuCAi9VgWC7hEVCJDaiIRGo_sUJ8uO4YLWRInS22T3Y.woff2) format('woff2');
+  unicode-range: U+0370-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Vollkorn';
+  font-style: normal;
+  font-weight: 600;
+  src: local('Vollkorn SemiBold'), local('Vollkorn-SemiBold'), url(https://fonts.gstatic.com/s/vollkorn/v8/fuCAi9VgWC7hEVCJDaiIRL6up8jxqWt8HVA3mDhkV_0.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Vollkorn';
+  font-style: normal;
+  font-weight: 600;
+  src: local('Vollkorn SemiBold'), local('Vollkorn-SemiBold'), url(https://fonts.gstatic.com/s/vollkorn/v8/fuCAi9VgWC7hEVCJDaiIRCYE0-AqJ3nfInTTiDXDjU4.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Vollkorn';
+  font-style: normal;
+  font-weight: 600;
+  src: local('Vollkorn SemiBold'), local('Vollkorn-SemiBold'), url(https://fonts.gstatic.com/s/vollkorn/v8/fuCAi9VgWC7hEVCJDaiIRI4P5ICox8Kq3LLUNMylGO4.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2212, U+2215;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Vollkorn';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Vollkorn Bold'), local('Vollkorn-Bold'), url(https://fonts.gstatic.com/s/vollkorn/v8/wMZpbUtcCo9GUabw9JODejTOQ_MqJVwkKsUn0wKzc2I.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Vollkorn';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Vollkorn Bold'), local('Vollkorn-Bold'), url(https://fonts.gstatic.com/s/vollkorn/v8/wMZpbUtcCo9GUabw9JODejUj_cnvWIuuBMVgbX098Mw.woff2) format('woff2');
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek */
+@font-face {
+  font-family: 'Vollkorn';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Vollkorn Bold'), local('Vollkorn-Bold'), url(https://fonts.gstatic.com/s/vollkorn/v8/wMZpbUtcCo9GUabw9JODemo_sUJ8uO4YLWRInS22T3Y.woff2) format('woff2');
+  unicode-range: U+0370-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Vollkorn';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Vollkorn Bold'), local('Vollkorn-Bold'), url(https://fonts.gstatic.com/s/vollkorn/v8/wMZpbUtcCo9GUabw9JODer6up8jxqWt8HVA3mDhkV_0.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Vollkorn';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Vollkorn Bold'), local('Vollkorn-Bold'), url(https://fonts.gstatic.com/s/vollkorn/v8/wMZpbUtcCo9GUabw9JODeiYE0-AqJ3nfInTTiDXDjU4.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Vollkorn';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Vollkorn Bold'), local('Vollkorn-Bold'), url(https://fonts.gstatic.com/s/vollkorn/v8/wMZpbUtcCo9GUabw9JODeo4P5ICox8Kq3LLUNMylGO4.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2212, U+2215;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Vollkorn';
+  font-style: normal;
+  font-weight: 900;
+  src: local('Vollkorn Black'), local('Vollkorn-Black'), url(https://fonts.gstatic.com/s/vollkorn/v8/8-5rb41gwXOx-b2XFI6VoDTOQ_MqJVwkKsUn0wKzc2I.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Vollkorn';
+  font-style: normal;
+  font-weight: 900;
+  src: local('Vollkorn Black'), local('Vollkorn-Black'), url(https://fonts.gstatic.com/s/vollkorn/v8/8-5rb41gwXOx-b2XFI6VoDUj_cnvWIuuBMVgbX098Mw.woff2) format('woff2');
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek */
+@font-face {
+  font-family: 'Vollkorn';
+  font-style: normal;
+  font-weight: 900;
+  src: local('Vollkorn Black'), local('Vollkorn-Black'), url(https://fonts.gstatic.com/s/vollkorn/v8/8-5rb41gwXOx-b2XFI6VoGo_sUJ8uO4YLWRInS22T3Y.woff2) format('woff2');
+  unicode-range: U+0370-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Vollkorn';
+  font-style: normal;
+  font-weight: 900;
+  src: local('Vollkorn Black'), local('Vollkorn-Black'), url(https://fonts.gstatic.com/s/vollkorn/v8/8-5rb41gwXOx-b2XFI6VoL6up8jxqWt8HVA3mDhkV_0.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Vollkorn';
+  font-style: normal;
+  font-weight: 900;
+  src: local('Vollkorn Black'), local('Vollkorn-Black'), url(https://fonts.gstatic.com/s/vollkorn/v8/8-5rb41gwXOx-b2XFI6VoCYE0-AqJ3nfInTTiDXDjU4.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Vollkorn';
+  font-style: normal;
+  font-weight: 900;
+  src: local('Vollkorn Black'), local('Vollkorn-Black'), url(https://fonts.gstatic.com/s/vollkorn/v8/8-5rb41gwXOx-b2XFI6VoI4P5ICox8Kq3LLUNMylGO4.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2212, U+2215;
+}

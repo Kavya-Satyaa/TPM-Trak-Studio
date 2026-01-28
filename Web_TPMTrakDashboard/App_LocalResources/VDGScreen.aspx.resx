@@ -1,0 +1,330 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="BoundFieldResource11.HeaderText" xml:space="preserve">
+    <value>PDT</value>
+  </data>
+  <data name="btnAnalysisResource1.Text" xml:space="preserve">
+    <value>Analysis</value>
+  </data>
+  <data name="btnStatisticsResource1.Text" xml:space="preserve">
+    <value>Statistics</value>
+  </data>
+  <data name="Button2Resource1.Text" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="LabelResource1.Text" xml:space="preserve">
+    <value>Data Updated Successively</value>
+  </data>
+  <data name="PageResource1.Title" xml:space="preserve">
+    <value>Cycle Analytics</value>
+  </data>
+  <data name="btnAplProductionGraph" xml:space="preserve">
+    <value>Apply</value>
+  </data>
+  <data name="btnDownData" xml:space="preserve">
+    <value>Down Time Data</value>
+  </data>
+  <data name="btnExportData" xml:space="preserve">
+    <value>Export Data</value>
+  </data>
+  <data name="btnGetLastN" xml:space="preserve">
+    <value>Get Last N</value>
+  </data>
+  <data name="btnProductionData" xml:space="preserve">
+    <value>Production Data</value>
+  </data>
+  <data name="btnStdTime" xml:space="preserve">
+    <value>Update Time</value>
+  </data>
+  <data name="chkHideGraph" xml:space="preserve">
+    <value>Hide Graph</value>
+  </data>
+  <data name="lblCompId" xml:space="preserve">
+    <value>Component ID</value>
+  </data>
+  <data name="lblOperationNum" xml:space="preserve">
+    <value>Operation No.</value>
+  </data>
+  <data name="lblStdCycleTime" xml:space="preserve">
+    <value>Std. Cycle Time</value>
+  </data>
+  <data name="lblStdLoadTime" xml:space="preserve">
+    <value>Std. Load Time</value>
+  </data>
+  <data name="managePanalHeading" xml:space="preserve">
+    <value>Component Performance</value>
+  </data>
+  <data name="myDTDGchkAll" xml:space="preserve">
+    <value>All</value>
+  </data>
+  <data name="myDTDGchkLoadUnLoad" xml:space="preserve">
+    <value>Load UnLoad</value>
+  </data>
+  <data name="myDTDGDownTimeGraph" xml:space="preserve">
+    <value>Down Time Graph</value>
+  </data>
+  <data name="myDTDGlabelBarGraph" xml:space="preserve">
+    <value>Bar Graph</value>
+  </data>
+  <data name="myDTDGlabelLineGraph" xml:space="preserve">
+    <value>Line Graph</value>
+  </data>
+  <data name="myDTDGPanelHeading" xml:space="preserve">
+    <value>Graph Options</value>
+  </data>
+  <data name="myDTDGProdGraphHeading" xml:space="preserve">
+    <value>Production Graph</value>
+  </data>
+  <data name="myDTDGTitle" xml:space="preserve">
+    <value>Graph Customization</value>
+  </data>
+  <data name="myDTDGYaxisHeading" xml:space="preserve">
+    <value>Y-Axis Upper Limit</value>
+  </data>
+  <data name="myDTGchkCycleTime" xml:space="preserve">
+    <value>Machining Time</value>
+  </data>
+  <data name="myModalGetstdTimeTitle" xml:space="preserve">
+    <value>Update Standard Times</value>
+  </data>
+  <data name="myModalTitle" xml:space="preserve">
+    <value>Components Filter</value>
+  </data>
+  <data name="pEnterRemarks" xml:space="preserve">
+    <value>Enter Remarks</value>
+  </data>
+  <data name="pNumOfComp" xml:space="preserve">
+    <value>Enter No. Of Components</value>
+  </data>
+  <data name="tdAvgCycleTime" xml:space="preserve">
+    <value>Avg. Machining Time</value>
+  </data>
+  <data name="tdAvgLoadTime" xml:space="preserve">
+    <value>Avg. Load Time</value>
+  </data>
+  <data name="tdComp" xml:space="preserve">
+    <value>Component</value>
+  </data>
+  <data name="tdCompCount" xml:space="preserve">
+    <value>Comp. Count</value>
+  </data>
+  <data name="tdDownTime" xml:space="preserve">
+    <value>Down Time</value>
+  </data>
+  <data name="tdLoadRatio" xml:space="preserve">
+    <value>Load Ratio</value>
+  </data>
+  <data name="tdOpCount" xml:space="preserve">
+    <value>Opn. Count</value>
+  </data>
+  <data name="tdReturnTot" xml:space="preserve">
+    <value>Return\Hr (Tot.)</value>
+  </data>
+  <data name="tdReturnUtil" xml:space="preserve">
+    <value>Return\Hr (Util)</value>
+  </data>
+  <data name="tdSpeedRatio" xml:space="preserve">
+    <value>Speed Ratio</value>
+  </data>
+  <data name="tdStCycleTime" xml:space="preserve">
+    <value>Std. Machining Time</value>
+  </data>
+  <data name="tdStLoadTime" xml:space="preserve">
+    <value>Std. Load Time</value>
+  </data>
+  <data name="tdTotal" xml:space="preserve">
+    <value>Total</value>
+  </data>
+  <data name="tdTurnOver" xml:space="preserve">
+    <value>Turn Over</value>
+  </data>
+  <data name="updatePanal1SearchTitle" xml:space="preserve">
+    <value>Custom Search</value>
+  </data>
+  <data name="updatePanal2Heading" xml:space="preserve">
+    <value>Machine Performance</value>
+  </data>
+  <data name="updatePanelmyRemarkScreenTitle" xml:space="preserve">
+    <value>Production - Remarks</value>
+  </data>
+  <data name="txtNoofComponentsResource1.Placeholder" xml:space="preserve">
+    <value>No. Of Components</value>
+  </data>
+  <data name="DownTimeDataGraph" xml:space="preserve">
+    <value>Down Time Data Graph</value>
+  </data>
+  <data name="ProductionDataGraph" xml:space="preserve">
+    <value>Production Data Graph</value>
+  </data>
+  <data name="Time(sec)" xml:space="preserve">
+    <value>Time (sec)</value>
+  </data>
+  <data name="ActCycleTime" xml:space="preserve">
+    <value>Act. Machining Time</value>
+  </data>
+  <data name="ActLoadUnload" xml:space="preserve">
+    <value>Act. LoadUnload</value>
+  </data>
+  <data name="StdCycleTime" xml:space="preserve">
+    <value>Std. Machining Time</value>
+  </data>
+  <data name="StdLoadUnload" xml:space="preserve">
+    <value>Std. LoadUnload</value>
+  </data>
+  <data name="DownTime" xml:space="preserve">
+    <value>DownTime</value>
+  </data>
+  <data name="NoDatatoExport" xml:space="preserve">
+    <value>No Data to export.</value>
+  </data>
+  <data name="PDT" xml:space="preserve">
+    <value>PDT</value>
+  </data>
+  <data name="PleaseEnterNoOfComponents" xml:space="preserve">
+    <value>Please Enter No. Of Components</value>
+  </data>
+  <data name="PleaseenteronlyNumbers" xml:space="preserve">
+    <value>Please enter only Numbers.</value>
+  </data>
+  <data name="PleaseEnterStdCycleTimeValuegreaterthanzero" xml:space="preserve">
+    <value>Please Enter Std. Cycle Time Value greater than zero !!</value>
+  </data>
+  <data name="PleaseEnterStdLoadTimeValuegreaterthanzero" xml:space="preserve">
+    <value>Please Enter Std. Load Time Value greater than zero !!</value>
+  </data>
+  <data name="Pleaseenterthenumberbetween1to100" xml:space="preserve">
+    <value>Please enter the number between 1 to 100.</value>
+  </data>
+  <data name="PleaseSelectComponent" xml:space="preserve">
+    <value>Please select Component !!</value>
+  </data>
+  <data name="RemarksUpdatedSuccessfullyforID" xml:space="preserve">
+    <value>Remarks updated Successfully for ID</value>
+  </data>
+  <data name="pEnterActionTaken" xml:space="preserve">
+    <value>Enter Action Taken</value>
+  </data>
+  <data name="btnProductionAndDownData" xml:space="preserve">
+    <value>Production+Down Data</value>
+  </data>
+  <data name="ProductionAndDownData" xml:space="preserve">
+    <value>Production &amp; Down Data</value>
+  </data>
+</root>

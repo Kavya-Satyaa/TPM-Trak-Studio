@@ -1,0 +1,843 @@
+WebV-10.0, DBV-5.11.0.0, ScriptName-132_TPMWeb_5.11.0.0
+
+Date: 11-03-2022
+Generic  
+1.Live Report -> OperatorEfficiency Report: Change message error message.
+2.Live Report -> Monthly OEE Report: Fixed negative value issue.
+3.Live Report -> HelpRequest Report: 
+	a) Export Excel - Removed AAAPL from header and 
+	b) Export Excel - Remarks: separate column.
+	b) Date restricted to 30 days
+	c) Enabled this report based on useraccess.
+4. Live Report -> Operator Dropdown : Changed text to OperatorName (Operator ID).
+5.Live -> Cockpit  -> Time restriction given in config file  (key: LiveCockpitDateInterval) 
+6.User Access: Moved Reports from Smart Manager to Live Analytics.
+7.AE, PE mismatch historical cockpit vs report (Production: Time Consolidated)  -> Fixed
+8.Live Report tab not appearing for users -> Fixed.
+9.Matrix report -> Pareto chart ->  Font size and chart size changes .
+10.Introduced Web and DB version validation.
+11. Historical -> Production Report (Daily) -> Merged utilized time.
+12. Historical -> Reject Dashboard -> Export  -> Enabled Data Label.
+
+
+GEA Sepecific:
+1.In GEA production report add Machine ID and 10th operation column -> Done
+2.Historical Cockpit -> Machinewise -> Added ML, Down PDT, ML PDT. -> Please re-aggregate the data.
+
+
+Date: 21-03-2022
+Anjali Operator Incetive Report - Hourwise:
+1. Couldn't generate reports for one month, as it takes a minimum of 20min to execute the scripts in SQL from backend and Dashboard will close automatically with error. ->Done
+2. Additional column required in report format of Avg Cycle time. ->Done
+3. Instead of Runtime+downtime, shift time be considered in all formulas. ->Done
+4.3 operator in one particular shift for an individual machine, 3 separates rows generated now, every row should calculate based one shift time, instead of the runtime of the individual operator. ->Done
+5. Introduced Total row
+
+===============================================================
+
+WebV-10.1, DBV-5.11.0.0, ScriptName-136_TPMWeb_5.11.0.0
+Date:26-03-2022
+Generic: 
+1. Introduced Down Time Matrix Dashboard in Historical Side.
+2. Live: DownTime Matrix Dashboard: Time restriction given in config file  (Key:LiveDownTimeDashboardInterval).
+3. Production report -Machinewise-shift format-3 ---Blank report generating --> Fixed
+4. Live: Production and down Report machinewise  --> Added PDT column
+5. Live Report: Production and rejection report -Daily By Hour,Operator Efficiency Report --part count need in decimal -> Done.
+6. Live Cockpit: OEE Pop-up: Change QE formula -> Done
+7. Production and rejection report -Daily by hour one tab next day generting but for that day data won't show -> Fixed
+8. Monthly Oee Report --Mention bar x axis ad AvgOEE and y axis as instead of this and last month mention months -> Done
+9. Hourly Part Count report not generating for first shift, and total count for shifts are showing wrong, only 4 hours showing in report -> Done
+
+GEA:
+1. Prodecanter Report.
+2. In-house inspection report for scroll should come in final report and to give an option in Testing area to select same production order number --> Done.
+3. Supplier PDF document which is attached has to come along with inspection report as confirmed by quality --> Done
+4. CE Checklist: Added new two checkbox in 8.0
+5. Cockpit Historical side: Introduced Finished Part Count field.
+6. GEA Report: Change GEA Logo -> Done
+7. Live: Production report -Machinewise-shift format-3 : Hide report -> Done
+8. COP Page : Hide Min. LUL Threshold -> Done
+
+Amararaja:
+1. Scrap Entry Screen: By default display RejectCount in TotalScrap -> Done.
+2. COP Screen: Introduced back button.
+3. Iconic Pop-up: 
+		- Display MachineID instead of InterfaceID -> Done
+		- Excel: To Date issue -> Fixed
+
+--------------
+
+WebV-10.1, DBV-5.11.0.0, ScriptName-136_TPMWeb_5.11.0.0
+Date:31-03-2022
+Kiswok: 
+1. Toolwise Cycle Time Report - Add summary row and new column NonCuttingTime 
+
+===============================================================
+
+WebV-10.2, DBV-5.11.0.0, ScriptName-137_TPMWeb_5.11.0.0
+Date:31-03-2022
+Generic:
+1. Component Batchwise Changes by raksha
+
+SKS:  Release to Ravi Sir
+
+
+===============================================================
+
+WebV-10.2, DBV-5.11.0.0, ScriptName-138_TPMWeb_5.11.0.0
+Date:07-04-2022
+KTA:
+1. Andon changes - 
+	- Introduced Schedule screen. Setting: Added Schedule flip interval.
+	- Cellwise flipping.
+2. Schedule master changes.
+3. Introduced Employee-Cell Association screen.
+
+===============================================================
+
+WebV-10.2, DBV-5.11.0.0, ScriptName-139_TPMWeb_5.11.0.0
+Date:07-04-2022
+GEA: Report changes (Prodecanter, DyePenetration)
+
+===============================================================
+
+WebV-10.3, DBV-5.11.0.0, ScriptName-141_TPMWeb_5.11.0.0
+Date:28-04-2022
+SSWL: Added multiselect machineID and CellID
+ -- Live and Agg. Report: Added multiselect machineID and CellID (Shift, Daily, TimeConcolodated, Comparison Report)
+ -- Cockpit: Live and Agg. side
+
+Added Advik184
+
+
+===============================================================
+
+WebV-10.4, DBV-5.11.0.0, ScriptName-141_TPMWeb_5.11.0.0
+Date:10-05-2022
+Generic:  Component Master: Changed export template.
+
+GEA:
+1. Checklist Report: Signature display issue fixed.
+2. Provision to be given for adding company logo so it has to change everywhere in the software as well as in reports ->Done
+3. PO Staus Report: Added Assembly-1 and Assembly-2 column.
+4. Production Report:
+		- Qty roundoff
+		- Rename Operation Cycle starttime
+		- Operation
+5. Display Pro-Decanter Individual report in Assembly-1 and Assembly-2 > Done
+6. Live Report: Hourly Part Count Report -> Please disable Patebrass flag in config file.
+7. Component Master: Changed export template.
+8. Pro-Decanter Report: Background color changes -> Done
+9. Andon: If uncheck ShopOut, image not coming -> Fixed.
+
+
+--------------------
+Date:11-05-22
+Advik184: Release
+
+-----------------------------------------
+
+Date: 18-05-22
+KTA:
+1.Production and DownTime Report: Printer settings added
+2.Andon : added Cellwise settings
+
+
+Date: 20-05-22
+GEA:
+1	Default Image Replace with Company Logo	- Kavya-	New	-Done
+2	Schedule Page- For Testing 'Change Priority' required-	Kavya -	New -	Done
+3	Web Scheduler - Suboperation Not getting added or deleted	 -	Kavya -		Bug -		Fixed
+4	Status Report: Cross check status for operator -		Vishwasini, Kavya -		Bug	 -	Fixed
+5	Multi select Machine option required- Production report gea -	Kavya, Vishwasini	 -	New	 -	Done
+6	Shift - Format 1 Report even though data exists t is showing 'NoData Found'	 -	Done -	Bug	
+7	Daily Format 1 Column Difference to be round off	 -	Vishwasini, Kavya	 -		Done
+8	Production Report Componentwise - Round to 2 digits -		Vishwasini, Kavya		 -	Done
+9	Finished Operation Report required on Liveside	Later	New	
+10	Downtime Report - DownID filter default to Select All	 -	Kavya	New	 -	Done
+11	Downtime Report - Machinewise Downtime Details - with VDG downtime not matching	 -	Swathi, Vishwasini -		Bug -		Fixed
+12	Daily By Hour Report and Help Request Report  and Monthly Oee Report Disable -		Kavya	 -		Done
+13	Enable Wipro Oee Report 	Later	New	
+14	Live Cockpit - Partcount round off	Vishwasini, Kavya		Done
+15	Aggregated Reports - Shiftwise Production Report - Workorderwise Calculation required -		Vishwasini, Kavya	 -		Done
+16	VDG - Include WorkorderNumber	Later	New	
+17	Aggregatd Reports - Daily - Format 1 - Workorderwise Calculation required	 -	Vishwasini	 -		Done
+18	Shop Default: Added new fields to disable Diff. and Target column  in  Live Report: Daily and Shift Fromat1 Report	
+
+Kiswok:
+1. Toolwise cycle time Report: Added new column ProgramBlock
+
+===============================================================
+WebV-10.5, DBV-5.11.0.0, ScriptName-143_TPMWeb_5.11.0.0
+Date:13-06-2022
+GEA (Generic): 
+1. Live: Operator efficiency report - Fixed negative OEE value.
+2. Agg. : Introduced new two report
+ -- Machinewise Downtime Details new report (ReportType: Downtime Report -> Format: Machinewise Downtime Details)
+ -- OEE Trend Report (ReportType: OEE Trend Report) (GEA specific)
+3. Live and Agg.: Downtime Report - Handled multiselect CellId and MachineId
+ -- Live: Machinewise Downtime Details,Machine DownTime Matrix (Time & Freq wise),Production and Down Pie,Machine DownTime Matrix
+ -- Agg: Machinewise Downtime Details,Time Wise (Format 1),Time & Freq Wise (Format 2)
+4. Live and Agg.: Downtime Report -> Live:Machine DownTime Matrix and Agg.:Time & Freq Wise (Format 2)- Added new 'DownTime Pareto' sheet.
+5. Live and Agg.: DownTime Dashboard : Introduced Export button.
+6. HelpRequest Report: 
+ --Renameed Average Acknowledgement Time to Average Acknowledgement Time (MTTA in min) and Average Reset Time to Average Reset Time ( MTTR in min ).
+
+KTA (Generic):
+1. Agg. : Introduced new Daily Rejection Report
+
+----------------------------------------------
+Date:14-06-2022
+Advik-Panth:
+FinalInspection Dashboard - Handled traceability rejection-rework workflow
+
+
+===============================================================
+
+WebV-10.5, DBV-5.11.0.0, ScriptName-144_TPMWeb_5.11.0.0
+Date: 17-06-22
+Ravi sir feedback
+1. Live Production report machinewise -time consolidated -If i select one machine and generating report but all machines data showing  --Done
+2. Live downtime report -Downtime matrix for one or 2 machines not generating --Done
+3. Aggregation side: OEE Trend Report --> for 2021-2022 and 2022-2023 value is showing wrong --Done
+4. Aggregation Dashboard component View --Partcount decimal value round off --Done
+5. Live & Agg.: DownTimeReport -> Machinewise downtime details --> Added new column 'PDTDown'.
+6. Operator Efficiency report 	TPM-Trak	"Report label need to change as Operator production report 
+   for some records std time not showing(Assembly-01)" --> Done
+
+AdvikPanth:
+1. Live: Added new Traceability Report (Specific).
+
+
+===============================================================
+
+WebV-10.6, DBV-5.11.0.0, ScriptName-144_TPMWeb_5.11.0.0
+Date: 01-07-22
+Mangal (Generic): (Release to Ravi)
+1. DownTimeReport Chart: Data labeld need to be aligned vertically -> Done
+2. DownTime Report(MachinewiseDownTimeDetails (Live & Agg), Format3(Agg)): -->Done
+   - Enable Std Setup and Effy. based on setting in ShopDefault(DownTime Report Std Setup & Eff. Visisble).
+   - Start and end to be remaned as start datetime and end datetime
+3. Enable DownTimeReport Format3 (Agg) Report for generic -> Done
+
+
+-------------------------------------------------------------
+
+WebV-10.6, DBV-5.11.0.0, ScriptName-144_TPMWeb_5.11.0.0
+Date: 04-07-22
+Ace Designers
+1. UploadToHMI and Schedule screen.
+
+
+
+====================================================================
+
+WebV-10.7, DBV-5.11.0.0, ScriptName-145_TPMWeb_5.11.0.0
+Date: 12-07-22
+GEA
+1. MachineInformation Master: Enabled Critical Machine option.
+2. Introduced UploadToHMI page.
+3. HelpRequest Report: Added new filed MTBF
+
+Mangal
+1. Change pareto chart color
+
+====================================================================
+WebV-10.8, DBV-5.11.0.0, ScriptName-145_TPMWeb_5.11.0.0
+Date: 13-07-22
+Bajaj:
+1. Bajaj Module included
+2. PP Dashboard UI Changes
+3. Energy: Report 'Cutting Time' included
+4. UserAccess: All Module data deleted issue fixed
+5. Alarm History: If bajaj then showing Alarm PDF
+
+-------------------------------------------------------------
+Date: 23-07-22
+Tafe:
+1. PDI Master Page included.
+
+-------------------------------------------------------------
+Date: 27-07-22
+Tafe:
+1. PDI Master: Picked PartNo. and Operation No. from Master
+
+Ace:
+1. AceTPMToSAPProdRejDetails Page included
+
+Generic:
+1. Aggregated Report: ComparisonReport for Month - Efficiency included
+
+
+====================================================================
+
+WebV-10.8, DBV-5.11.0.0, ScriptName-146_TPMWeb_5.11.0.0
+Date: 30-07-22
+Ace:
+1. SAP Prod. Rej. Details Screen (Live Analytics - > SAP Prod. Rej. Details )
+2. Added new columns Completed Qty,SAP Status
+3. Added new filter SAP Status and Refesh button
+4. Send To HMI validation:
+      -- Schedule Status=New or Hold and SAP Status = Rel or PCNF
+      -- Restrict Sequence duplication
+5. Changed Schedule and material id label.
+6. Sequence validation : 1-10
+
+
+====================================================================
+
+WebV-10.9, DBV-5.11.0.0, ScriptName-147_TPMWeb_5.11.0.0
+
+Machine Information: Added MobileEnabled column.
+
+Date: 30-07-22
+Ace: 
+1. SAP Prod. Rej. Details Screen (Live Analytics - > SAP Prod. Rej. Details )
+Schedule Screen
+2. Added new columns Completed Qty,SAP Status
+3. Added new filter SAP Status and Refesh button
+4. Send To HMI validation:
+      -- Schedule Status=New or Hold and SAP Status = Rel or PCNF
+      -- Restrict Sequence duplication
+5. Changed Schedule and material id label.
+6. Sequence validation : 1-10
+
+
+====================================================================
+
+WebV-10.9, DBV-5.11.0.0, ScriptName-148_TPMWeb_5.11.0.0
+
+Machine Information: Added MobileEnabled column.
+
+Date: 11-08-22
+GEA (Specific): 
+1. Introduced two new reports: Quality PC Report - TimeConsolidated and yearly
+2. Production Schedule: Added new column 'Old Schedule StartTime' and  'Old Schedule EndTime'
+3. First Sample Report: Changed border color.
+4. Test Protocol Report: Fixed PDF display issue.
+
+
+===============================================================
+
+WebV-10.10, DBV-5.11.0.0, ScriptName-149_TPMWeb_5.11.0.0
+
+Date: 13-08-22
+Shanti (Generic): 
+1. Enabled Shanti Inspetion master page as Generic.
+
+
+
+====================================================================
+
+WebV-10.11, DBV-5.11.0.0, ScriptName-151_TPMWeb_5.11.0.0
+
+Date: 23-08-22
+Generic: 
+Report: Introduce Multiselect Machine and Cell concept
+Live Analytics 
+	1. Daily Rejection Report
+	2. Monthly OEE Report
+	
+Historical Analytics 
+	1. Daily Rejection Report
+	2. Rejection Analysis Report
+
+Date: 23-08-22
+Devendra:
+Generic: 
+Rejection Entry Screen: Fixed data display issue.
+
+-----------------------------------------------------------
+
+Date: 24-08-22
+GEA (Specific)
+1. Production Schedule changes need to test again – old and new Sch. Time showing same time  ->Done
+2. Production Schedule export report new column are not there   ->Done
+3. In Schedule export report need to change logo (New Logo)  ->Done
+4. DPHU Report need to change template colour as per GEA and Export Report name as “DPHU Quality Incoming“ & “DPHU Quality In-house” – please find attached templates  ->Done
+5. Yearly and Weekly Report: Introduced Remarks sheet.
+
+ Date: 24-08-22
+Allied
+1. Component Master: Introduced  Std. Test Pressure and Std. Holding Time fields in import and export.
+2. VDG Screen: Added 2 new columns Act.Test Pressure and Act.Holding Time
+
+-----------------------------------------------------------
+
+Date: 25-08-2022
+Removed PP Dashboard from Bajaj Analytics and make it generic for enable and disable given option in WebConfig
+
+-----------------------------------------------------------
+
+Date: 07-09-2022
+Leonine - Released to Sanket Sir
+1. Introduced 'LeoninePages' in web.config
+2. In Live Analytics -> Reports given Type 'Production Hour Report - Leonine' 
+
+-----------------------------------------------------------
+
+Date: 09-09-2022
+GEA
+1. SMS Setting : Added GSM Model
+2. Help Request Setting changes
+
+KTA 
+1. Added TPM MAster Screen for Export
+2. COP Screen- Added cellID
+2. Operator efficiency Report, Production and downTime Report Chnages 
+
+-----------------------------------------------------------
+
+Date: 10-09-2022
+Pooja - Released to Deepak Sir
+1. Introduced 'PoojaPages' in web.config
+2. In 'PoojaANDON' Menu included and Settings also provided.
+
+------------------------------------------------------------------
+Date: 16-09-2022
+
+Trellborg
+1. Added OEE Trellborg report - (format2 - shiftwise)
+
+
+===============================================================
+
+WebV-10.12, DBV-5.11.0.0, ScriptName-157_TPMWeb_5.11.0.0
+
+
+Date: 20-09-2022 (Released To Sharat Sir)
+
+LnT ODISHA (Base Bajaj):
+1. PP Master:  Added 'OPCUA' in SourceType.
+
+Generic:
+1. Machine Information: Introcuded 'OPCUA' Column.
+2. Removed 'PP Dashboard' key in webconfig and put 'PP Dashboard' and 'Alarm History' under 'Live Analytics'.
+3. VDG Screen and Iconic View: Introduced 'Spindle Run Time' Column (Option given in App Setting for Visible and Hide )
+4. PM Activity: Master and Date Generation Machine ID introduced
+5. PP Dashboard: All Parameters value will come from SQL..Commented MongoDB
+
+--------------------------------------------------------------------------------------------
+Date : 22-09-2022 
+
+Harsha
+1. Introduced 'HarshaReport' in web.config
+2. In Live Analytics -> Reports-> KKPillar Report 
+
+
+===============================================================
+
+WebV-10.13, DBV-5.11.0.0, ScriptName-159_TPMWeb_5.11.0.0
+
+
+Date: 06-10-2022 
+Cumi :
+1. Included cumi related changes.
+
+===============================================================
+
+WebV-10.14, DBV-5.11.0.0, ScriptName-162_TPMWeb_5.11.0.0
+
+Date: 11-10-2022 
+Generic(Sahyadri) :
+1. Utilsed and Down Time Dashboard(Path: Historical Analytics -> Utilised-DownTime)
+
+--------------------------------------------------------------------------------------------
+
+Date: 14-10-2022
+
+Allied:
+Generic Report: 
+1.Live Analytics -> Reports-> Operator Performance Report - Shiftwise 
+
+Specific:
+2.Live Analytics -> Reports->Hydro Test Report
+
+--------------------------------------------------------------------------------------------
+
+Date: 14-10-2022 
+RTPL :
+1. New Report: Production Analysis Report (Path: Historical Analytics -> Report -> ReportType: Production Analysis Report). 
+
+--------------------------------------------------------------------------------------------
+
+WebV-10.14, DBV-5.11.0.0, ScriptName-163_TPMWeb_5.11.0.0
+
+Date: 19-10-2022
+
+Pooja Casting:(Generic)
+Introduced column Owner-
+
+Historical Analytics  -> Reports -> Downtime Report
+1.Time wise Format 1
+2.Time and Freq wise Format 2
+
+Live Analytics -> Reports ->Downtime Report 
+1. Machine DownTime Matrix
+2. Machine DownTime Matrix (Time & Freq wise)
+
+Live Analytics -> Reports ->Daily Rejection Report: New column Rejection booked time added.
+
+------------------------------------------------------------------------------------------------
+WebV-10.14, DBV-5.11.0.0, ScriptName-164_TPMWeb_5.11.0.0
+
+Date: 19-10-2022
+Lnt Odissa:
+PM Generation Changes
+
+------------------------------------------------------------------------------------------------
+WebV-10.14, DBV-5.11.0.0, ScriptName-165_TPMWeb_5.11.0.0
+
+Date: 03-11-2022
+Cumi: (Released To Kiran Sir)
+1. Included Cumi Report
+2. 'Chart Type' included in Process Parameter Master
+3. Process Parameter Dashboard Design changed (as per customer feedback)
+
+------------------------------------------------------------------------------------------------
+WebV-10.14, DBV-5.11.0.0, ScriptName-166_TPMWeb_5.11.0.0
+
+Date: 09-11-2022
+Cumi: (Released To Kiran Sir)
+1. Included 'Import' in Plan Entry Screen
+3. Process Parameter Dashboard Design changed
+
+-----------------------------------------------------------------------------------------------
+WebV-10.15, DBV-5.11.0.0, ScriptName-167_TPMWeb_5.11.0.0
+
+Date:09-11-2022
+KTA:(Generic)
+Historical Analytics  -> Reports -> Production Report - Machinewise(Shift,Daily) - Added column OperatorName,Rejection Qty
+
+===============================================================
+WebV-10.16, DBV-5.11.0.0, ScriptName-170_TPMWeb_5.11.0.0
+
+Date: 25-11-2022 (Released to Kiran Sir)
+Generic:
+1. Cycle Analytics: Renamed Std. Cycle Time to Std. Machining Time and Avg. Cycle Time to Avg. Machining Time.
+2. Cycle Analytics -> Production Data Chart: Renamed Cycle Time to Machining Time. Included Std. and Avg. Cycle Time (Total).
+3. Component Information: Renamed CNC Machine to Machine, Loading Unloading to Loading Unloading Time and Cycle Time to Machining Time.
+4. Iconic View -> OEE Clicked: Renamed Standard Time to Standard Cycle Time.
+5. Energy Setting: Included 'Cost' column and diplayed in Dashboard.
+
+Cumi Specific:
+1. Production & Quality Screen: Line Graph export to excel (Day, Weekly and Monthly Data).
+2. Process Parameter Dashboard: Insted of ComponentId showing Component Description.
+3. Autorefresh icon changed.
+
+===============================================================
+WebV-10.17, DBV-5.11.0.0, ScriptName-171_TPMWeb_5.11.0.0
+
+Date: 01-12-2022 (Released to Kiran Sir)
+Generic:
+1. Application Setting: Given the option to set Component Inofrmation Interface Id DataType (either numeric or alphaNumeric).
+2. Component Information: For the Column renaming option provided in the 'Application Setting' screen.
+3. Item Std. Cycle Time new page included under 'Smart Shop'.
+4. Employee Information: If edit the employee details, passowrd getting blank for all employees - Issue Fixed.
+5. Dashboard: Bar and Line chart icon ToolTip name changed same as column name.
+6. Iconic View: Auto Refresh icon changed.
+7. Table View: Auto Refresh icon changed.
+8. Energy Live Data: For the Column renaming option provided in the 'Application Setting' screen.
+9. ShiftProductionCountHourlyWithDownCode: Auto Refresh icon changed.
+
+Cumi Specific:
+1. Plan Entry Screen: Changed Download Format Icon.
+2. Plan Entry Screen: 'Item Std. Cycle Time' table provided and if click on 'New Entries' count navigate to 'Item Std Cycle Time' master screen.
+3. Plan Entry Screen: 'All' option provided in Machine dropdown.
+4. Process Parameter Details: Auto Refresh icon changed.
+5. Production & Quality Screen: Auto Refresh icon changed.
+6. Production & Quality Screen: In Pie chart, category value changed to 'Production Count' (after click on view table) and showing title of the chart while downloading.
+7. Production & Quality Screen: Hourly Data export, format issue fixed.
+
+-------------------------------------------------------------
+WebV-10.17, DBV-5.11.0.0, ScriptName-172_TPMWeb_5.11.0.0
+
+Date: 03-12-2022 (Released to Kiran Sir)
+
+Cumi Specific: 
+1. Production & Quality Screen: % Completion value not coming in export - Issue fixed
+2. Production & Quality Screen: Charts DataTable hided whole modal open
+3. Plan Entry Screen: Download Format icon changed and grid alignment changes.
+4. Production & Quality Screen: Hourly 7 days(both view), Shift - DV + Live = 7days -- DV + Aggregate = Open -- RV = open date
+5. Plan Entry and PP Master Screen user access enabled.
+6. Employee Role: Picking distinct role from employee information and append to Employee Role Dropdown.
+
+
+---------------------------------------------------------------------
+
+Date: 03-12-2022
+
+Tafe specific:
+Added Heat Treatment Master Schedule screen
+
+---------------------------------------------------------------------
+WebV-10.17, DBV-5.11.0.0, ScriptName-174_TPMWeb_5.11.0.0
+
+Date: 07-12-2022, 
+
+Allied :(Generic)
+1. Operator Performance Report : Introduced Column - Difference,AE,PE,Utilized Time 
+
+
+===============================================================
+WebV-10.18, DBV-5.11.0.0, ScriptName-175_TPMWeb_5.11.0.0
+
+Date: 16-12-2022
+
+Cumi :(Generic)
+1. Table and Iconic View Switch option.
+2. Runtimechart new screen using Highcharts 
+
+---------------------------------------------------------------------
+WebV-10.18, DBV-5.11.0.0, ScriptName-176_TPMWeb_5.11.0.0
+
+Date:26-12-2022
+
+GEA:(specific)
+1.Added Report- Tracebility Report,ZCLFGMD Report
+2.Operator efficiency report (aggregrated)- Cycle end time column added.
+
+ACE:(specific)
+1.Schedule: MRPController Dropdown added.
+2.Added column Development.
+
+
+===============================================================
+WebV-10.19, DBV-5.11.0.0, ScriptName-176_TPMWeb_5.11.0.0
+
+Date: 30-12-2022
+Hawkins:
+1.VDG Screen: Added Events tab button.
+2.VDG Screen: Production: Introduced two new columns Cooling and Heating Time
+
+
+------------------------------------------
+
+Date: 03-01-2023
+Cumi: Phase-2
+
+---------------------------------------------------------------------
+
+Date: 04-01-2023
+GEA: (specific)
+1. Added Report - MachineMix Report, ParkOrder Report
+2. Introduced FabNo column in GEA Production Report
+
+
+===============================================================
+WebV-10.20, DBV-5.11.0.0, ScriptName-177_TPMWeb_5.11.0.0
+
+Date: 07-01-2023
+Wipro 
+1. Iconic View: Pre defined time not functioning properly.
+2. In Downtime Analytics and VDG Screen format to be change to HH:mm:ss.
+3. Formula changes.
+4. Iconic view: Remove status icon and remove box color.
+5. VDG Screen: Downtime Data: Add Compoent, operation and Workorder.
+
+AutoTech:
+1. Shiftwise Downtime Report: (Path: Historical Analytics -> Reports -> ReportType:Shiftwise Downtime Report)
+
+
+
+===============================================================
+WebV-10.21, DBV-5.11.0.0, ScriptName-179_TPMWeb_5.11.0.0
+
+Date: 30-01-2023
+Generic point changes
+
+-------------------------------------------------------------
+Date: 01-02-2023
+GEA: (specific)
+Reports Added
+1.Machine Wise Assembly Report
+2.Monthly Operator Efficiency Report 
+3.Mode std vs Actual Time Report
+4.Production Schedule History Report
+
+
+
+===============================================================
+WebV-10.22, DBV-5.11.0.0, ScriptName-180_TPMWeb_5.11.0.0
+
+Date:06-02-23
+Generic: 
+1. Create Schedule: Added Subject column.
+2. Component Master: Import master changes
+3. Energy: Removed hardcoded shift details.
+
+Date:06-02-23
+LnT: 
+1. Addec two report: Spindle runtime Analysis Report (Agg.) and Spindle Idletime Analysis Report (Live)
+
+
+Date: 07-02-2023 (Released To Sharat Sir)
+1. PAMS bit included
+2. ComponentOperationInformation: Process included
+
+
+Date: 09-02-2023 
+GEA
+1. Schedule changes
+2. Introduced 2 new master screens: Assembly Schedule Master and ChildPart Master
+
+Date: 11-02-2023 
+Cumi
+1. Cumi-specific, shift, and daily reports need to be enabled for the scheduled report. -->Done
+2. Cumi Specific >> Production Data >> If auto refresh is enabled and opens the chart, the chart will not open. -->Fixed
+3. Iconic View >> Smiley's requires a Legend. -->Done
+4. Run time chart:
+    - The run time chart requires a grid line. -->Done
+    - The data popup for the run time chart is incorrect; the data popup does not show where we point. -->Done
+    - Run Time Chart does not open and throws an error when we click on it. -->Not reproduced
+5. Process Parameter Trend >> Cooling tower water temperature trend should show irrespective of machine selection (refer Process parameter ) -->Fixed
+6. Energy Trend >> The tonnage value needs to be divided by 1000, to convert the value to tons. -->Done
+   - SPC data needed in line graph with 2axis graph. -->Done
+   - monthly trend is required for the year. -->Not Done
+   - cumulative trend is required, All selections need to be given (The choice will be between one machine and all machines.)WRT selection and cumulative trend are required  -->Not Done
+7. SPC Target >> Target value The column name should be given with the unit ( Target value [KWH/Tonnage] ) -->Done
+8. PO Status Screen is required, just like the given PO report sample. -->will release along with Phase2
+9. Loss Report >> MMTR and MTBF should show in hours -->Done
+    - The loss id is not generated in the loss report for some down records. -->Done
+     - The upload doc for the loss report is not working. -->Create CumiDocuments folder
+10. Cumi Specific Shift report, Completion % is column is missing -->Done
+
+--------------------------------------------------------------------------------------------------
+Date: 21-02-2023
+
+Cumi
+Added Reports
+1.Motor Status,Hydraulic temp & Pressure,Cooling Tower report,Energy report,OEE (Cumi Analytics -> Reports)
+2.Process Paramerters report,PO Status Report (Cumi Analytics -> Dashboard+Report)
+
+
+
+===============================================================
+WebV-10.23, DBV-5.11.0.0, ScriptName-181_TPMWeb_5.11.0.0
+
+Date:06-02-23
+Generic: (Cumi)
+1. PM activity page changes
+
+
+
+
+===============================================================
+WebV-10.24, DBV-5.11.0.0, ScriptName-181_TPMWeb_5.11.0.0
+
+Date:06-02-23
+Generic (Kiswok):
+Energy module changes
+
+-------------------------------------------------------------------
+Date:23-03-2023
+
+ACE (specific)
+1.Added Report Machine Utilization Report (Live Analytics -> Reports->Machine Utilization report- ACE)
+2.Schedule screen - Introduced Status column as Dropdown, popup screen to change the status based on userID and password created in web config
+
+---------------------------------------------------------------------------------
+Date:28-04-2023
+
+KTA (specific)
+1. Added Part family master
+2. COP screen- introduced Part family
+3. Added Document View screen
+4. Update component to Store Screen
+5. Store Andon
+6. Added Inspection Master
+7. Inspection supervisor screen added
+
+--------------------------------------------------------------------------------------
+Date:24-06-2023
+
+GK Report (Specific)
+Added Operator Incentive Report (Aggregrated Report -> Reports)
+
+
+
+===============================================================
+WebV-10.25, DBV-5.11.0.0, ScriptName-194_TPMWeb_5.11.0.0
+
+Date:24-07-23 - 29-07-23
+Generic (Kiswok):
+UpdatedTS added in some table.
+
+
+===============================================================
+Date: 25-09-2023
+WebV-10.26, DBV-5.11.0.0, ScriptName-197_TPMWeb_5.11.0.0
+
+Generic:
+Live Analytics - Downtime Report (Machine Downtime Matrix Report):
+Added Total Revenue Loss by Machine and By Downcode added.
+
+==============================================================
+Date: 17-11-2023
+WebV-10.27, DBV-5.11.0.0, ScriptName-202_TPMWeb_5.11.0.0
+Generic: 
+1. Added Action Taken Column In VDG Downtime Dashboard, Job Card screen(May)
+2. Hist. Analytics -> Dashboard -> Downtime chart -> Monthwise -> On click of ActionTaknen Button Launch ActionTaken Dashboard
+
+
+===================================================================
+Date: 29-11-2023
+WebV-10.28, DBV-5.11.0.0, ScriptName-202_TPMWeb_5.11.0.0
+Generic:
+1.VDG- Production and Down Screen added.
+2.Hist. Analytics ->Reports -> Production Report - Componentwise added.
+3.VDG- In progress cycle removed in graph.
+4.COP- SCI and DCL threshold added.
+
+Dantal(specific):
+Iconic and Table view(Live and Historic) - Purple color for PE > 100
+
+
+======================================================================
+Date: 08-12-2023
+WebV-10.28, DBV-5.11.0.0, ScriptName-204_TPMWeb_5.11.0.0
+Generic:
+1.Setting page redesign (applicationSetting.aspx)
+2.Cleanup Process changes.
+
+Machine Connect (Specific):
+1.Production Analytics changes(runtime chart)
+2.Setting page added.
+
+======================================================================
+Date: 18-01-2024
+WebV-10.29, DBV-5.11.0.0, ScriptName-211_TPMWeb_5.11.0.0
+Generic: 
+1. Production Andon in Table View Format Added in parallel to Cockpit View.
+2. Generic Andon in side menu is renamed as Andon (Cockpit View).
+
+======================================================================
+Date: 27-01-2024
+WebV-10.30, DBV-5.12.0.0, ScriptName-4_TPMWeb_5.12.0.0
+
+Generic:
+1. added Incentive column in COP.
+2. Added Rejection count column in ShiftProduction Report (Live Analytics-> Reports->ProductionReport-Machinewise->(Type-Shift)->Format1
+
+Specific:(RNGupta):
+Added Reports- Aggregated side
+1. Production Report
+2. Incentive Report
+
+Specific:(Kach Motors)
+1.Added Operator efficiency Report -> Format2
+
+=========================================================================
+Date:13-02-2024
+WebV-10.30,DBV-5.12.0.0,ScriptName-4_TPMWeb_5.12.0.0
+
+Generic:
+1.Added Component Description, Std Cycle Time Columns in LiveAnalytics-> Production Report - MachineWise(Format-3)
+
+==========================================================================
+Date:23-04-2024
+WebV-10.30,DBV-5.12.0.0,ScriptName-11_TPMWeb_5.12.0.0
+
+Generic: (Machine Connect)
+1. Added Program Change Dashboard
+2. Added Program Upload History Dashboard

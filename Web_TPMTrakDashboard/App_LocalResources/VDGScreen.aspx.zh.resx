@@ -1,0 +1,324 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="BoundFieldResource11.HeaderText" xml:space="preserve">
+    <value>PDT</value>
+  </data>
+  <data name="btnAnalysisResource1.Text" xml:space="preserve">
+    <value>分析</value>
+  </data>
+  <data name="btnhideResource1.Text" xml:space="preserve">
+    <value>好的</value>
+  </data>
+  <data name="btnStatisticsResource1.Text" xml:space="preserve">
+    <value>统计</value>
+  </data>
+  <data name="Button2Resource1.Text" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="LabelResource1.Text" xml:space="preserve">
+    <value>数据更新成功</value>
+  </data>
+  <data name="PageResource1.Title" xml:space="preserve">
+    <value>循环分析</value>
+  </data>
+  <data name="btnAplProductionGraph" xml:space="preserve">
+    <value>应用</value>
+  </data>
+  <data name="btnDownData" xml:space="preserve">
+    <value>停机时间数据</value>
+  </data>
+  <data name="btnExportData" xml:space="preserve">
+    <value>导出数据</value>
+  </data>
+  <data name="btnGetLastN" xml:space="preserve">
+    <value>获得最终数量</value>
+  </data>
+  <data name="btnProductionData" xml:space="preserve">
+    <value>生产数据</value>
+  </data>
+  <data name="btnStdTime" xml:space="preserve">
+    <value>更新时间</value>
+  </data>
+  <data name="chkHideGraph" xml:space="preserve">
+    <value>隐藏图表</value>
+  </data>
+  <data name="lblCompId" xml:space="preserve">
+    <value>工件ID</value>
+  </data>
+  <data name="lblOperationNum" xml:space="preserve">
+    <value>操作编号</value>
+  </data>
+  <data name="lblStdCycleTime" xml:space="preserve">
+    <value>标准周期时间</value>
+  </data>
+  <data name="lblStdLoadTime" xml:space="preserve">
+    <value>标准加载时间</value>
+  </data>
+  <data name="managePanalHeading" xml:space="preserve">
+    <value>工件性能</value>
+  </data>
+  <data name="myDTDGchkAll" xml:space="preserve">
+    <value>所有</value>
+  </data>
+  <data name="myDTDGchkLoadUnLoad" xml:space="preserve">
+    <value>装载 卸载</value>
+  </data>
+  <data name="myDTDGDownTimeGraph" xml:space="preserve">
+    <value>停机时间图</value>
+  </data>
+  <data name="myDTDGlabelBarGraph" xml:space="preserve">
+    <value>条状图</value>
+  </data>
+  <data name="myDTDGlabelLineGraph" xml:space="preserve">
+    <value>线形图</value>
+  </data>
+  <data name="myDTDGPanelHeading" xml:space="preserve">
+    <value>图表选项</value>
+  </data>
+  <data name="myDTDGProdGraphHeading" xml:space="preserve">
+    <value>生产图</value>
+  </data>
+  <data name="myDTDGTitle" xml:space="preserve">
+    <value>图定制</value>
+  </data>
+  <data name="myDTDGYaxisHeading" xml:space="preserve">
+    <value>Y轴上限</value>
+  </data>
+  <data name="myDTGchkCycleTime" xml:space="preserve">
+    <value>循环周期</value>
+  </data>
+  <data name="myModalGetstdTimeTitle" xml:space="preserve">
+    <value>更新标准时间</value>
+  </data>
+  <data name="myModalTitle" xml:space="preserve">
+    <value>工件过滤</value>
+  </data>
+  <data name="pEnterRemarks" xml:space="preserve">
+    <value>输入备注</value>
+  </data>
+  <data name="pNumOfComp" xml:space="preserve">
+    <value>输入工件数量</value>
+  </data>
+  <data name="tdAvgCycleTime" xml:space="preserve">
+    <value>平均周期时间</value>
+  </data>
+  <data name="tdAvgLoadTime" xml:space="preserve">
+    <value>平均装载时间</value>
+  </data>
+  <data name="tdComp" xml:space="preserve">
+    <value>工件</value>
+  </data>
+  <data name="tdCompCount" xml:space="preserve">
+    <value>工件计数</value>
+  </data>
+  <data name="tdDownTime" xml:space="preserve">
+    <value>停机时间</value>
+  </data>
+  <data name="tdLoadRatio" xml:space="preserve">
+    <value>负载率</value>
+  </data>
+  <data name="tdOpCount" xml:space="preserve">
+    <value>操作计数</value>
+  </data>
+  <data name="tdReturnTot" xml:space="preserve">
+    <value>返回\小时（总计）</value>
+  </data>
+  <data name="tdReturnUtil" xml:space="preserve">
+    <value>返回\小时（已用）</value>
+  </data>
+  <data name="tdSpeedRatio" xml:space="preserve">
+    <value>转速比</value>
+  </data>
+  <data name="tdStCycleTime" xml:space="preserve">
+    <value>标准周期时间</value>
+  </data>
+  <data name="tdStLoadTime" xml:space="preserve">
+    <value>标准加载时间</value>
+  </data>
+  <data name="tdTotal" xml:space="preserve">
+    <value>总</value>
+  </data>
+  <data name="tdTurnOver" xml:space="preserve">
+    <value>翻转</value>
+  </data>
+  <data name="updatePanal1SearchTitle" xml:space="preserve">
+    <value>自定义搜索</value>
+  </data>
+  <data name="updatePanal2Heading" xml:space="preserve">
+    <value>机床性能</value>
+  </data>
+  <data name="updatePanelmyRemarkScreenTitle" xml:space="preserve">
+    <value>生产 - 备注</value>
+  </data>
+  <data name="txtNoofComponentsResource1.Placeholder" xml:space="preserve">
+    <value>工件数量</value>
+  </data>
+  <data name="DownTimeDataGraph" xml:space="preserve">
+    <value>停机时间数据图</value>
+  </data>
+  <data name="ProductionDataGraph" xml:space="preserve">
+    <value>生产数据图</value>
+  </data>
+  <data name="Time(sec)" xml:space="preserve">
+    <value>时间（秒）</value>
+  </data>
+  <data name="ActCycleTime" xml:space="preserve">
+    <value>法案。周期</value>
+  </data>
+  <data name="ActLoadUnload" xml:space="preserve">
+    <value>法案。加载卸载</value>
+  </data>
+  <data name="StdCycleTime" xml:space="preserve">
+    <value>标准。周期</value>
+  </data>
+  <data name="StdLoadUnload" xml:space="preserve">
+    <value>标准。加载卸载</value>
+  </data>
+  <data name="DownTime" xml:space="preserve">
+    <value>停机</value>
+  </data>
+  <data name="NoDatatoExport" xml:space="preserve">
+    <value>没有要导出的数据。</value>
+  </data>
+  <data name="PDT" xml:space="preserve">
+    <value>太平洋夏令时</value>
+  </data>
+  <data name="PleaseEnterNoOfComponents" xml:space="preserve">
+    <value>请输入组件数量</value>
+  </data>
+  <data name="PleaseenteronlyNumbers" xml:space="preserve">
+    <value>请只输入数字。</value>
+  </data>
+  <data name="PleaseEnterStdCycleTimeValuegreaterthanzero" xml:space="preserve">
+    <value>请输入标准。周期时间值大于零！</value>
+  </data>
+  <data name="PleaseEnterStdLoadTimeValuegreaterthanzero" xml:space="preserve">
+    <value>请输入标准。加载时间值大于零！</value>
+  </data>
+  <data name="Pleaseenterthenumberbetween1to100" xml:space="preserve">
+    <value>请输入1到100之间的数字。</value>
+  </data>
+  <data name="PleaseSelectComponent" xml:space="preserve">
+    <value>请选择Component！</value>
+  </data>
+  <data name="RemarksUpdatedSuccessfullyforID" xml:space="preserve">
+    <value>注释成功更新了ID</value>
+  </data>
+</root>

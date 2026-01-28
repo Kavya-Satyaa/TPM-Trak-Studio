@@ -1,0 +1,391 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="AndonMaster.master.cs" Inherits="Web_TPMTrakDashboard.WebAndon.AndonMaster" %>
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge, width=device-width, initial-scale=1" />
+    <title><%: Page.Title %> - ANDON</title>
+    <asp:PlaceHolder runat="server">
+        <%: Scripts.Render("~/bundles/modernizr") %>
+    </asp:PlaceHolder>
+    <%--<webopt:BundleReference runat="server" Path="../AndonContent/css" />--%>
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link href="../AndonContent/bootstrap.min.css" rel="stylesheet" />
+    <%--    <link href="../Content/bootstrap.min.css" rel="stylesheet" />--%>
+    <%--<script src="../AndonScripts/jquery-3.1.0.min.js"></script>--%>
+    <style type="text/css" media="screen">
+        body, html {
+            padding: 0;
+            margin: 0;
+            height: 100%;
+            width: 100%;
+        }
+
+        /*body::-webkit-scrollbar {
+                width: 10px;
+            }
+
+            body::-webkit-scrollbar-track {
+                -webkit-box-shadow: inset 0 0 7px rgba(0,0,0,0.5);
+                border-radius: 10px;
+            }
+
+            body::-webkit-scrollbar-thumb {
+                background-color: rgba(0,0,0,0.3);
+                border-radius: 10px;
+            }
+
+                body::-webkit-scrollbar-thumb:hover {
+                    background-color: rgba(0,0,0,0.5);
+                }*/
+
+        #menu {
+            position: fixed;
+            top: 0;
+            height: 50px;
+            width: 100%;
+            background: white;
+            box-shadow: 0 0 10px black;
+        }
+
+        .part1 {
+            height: 100%;
+            text-align: center;
+        }
+
+        .part2 {
+            background: #266590;
+            color: white;
+            display: inline-block;
+            vertical-align: bottom;
+            /*border-radius: 5px 0 0 0;*/
+            font-family: Cambria;
+            /*margin-top: 2px;*/
+        }
+
+        .part3 {
+            display: inline-block;
+            /*margin-left: 2px;*/
+            min-width: 100px;
+            vertical-align: bottom;
+            height: 85%;
+            font-family: Cambria;
+        }
+
+        .dropdowncss {
+            font-weight: bold;
+            font-size: 1em;
+        }
+
+        .part4 {
+            float: right;
+            height: 100%;
+            background: white;
+        }
+
+        .iconbtn {
+            background-color: white;
+            color: white;
+            height: 45px;
+            width: 46px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            padding: 5px;
+            padding-bottom: 0;
+        }
+
+        h1.myheader {
+            height: 30px;
+            margin: 10px;
+            min-width: 100px;
+            font-weight: bold;
+            font-size: 1.5em;
+        }
+
+        .companyicon {
+            height: 50px;
+            clip: rect(10px,10px,10px,10px);
+            min-width: 100px;
+        }
+
+        .content {
+            width: 100%;
+            position: relative;
+        }
+
+        .iconbtn:hover, .iconbtn:focus {
+            background-color: white;
+        }
+
+        .dropdownmenue {
+            position: relative;
+            display: inline-block;
+        }
+
+        .menu-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            overflow: auto;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            text-align: left;
+        }
+
+            .menu-content a {
+                color: black;
+                padding: 8px 16px;
+                text-decoration: none;
+                display: block;
+            }
+
+        .dropdown a:hover {
+            background-color: #f1f1f1;
+            color: #AE76EB;
+        }
+
+        .show {
+            display: block;
+        }
+
+        #divBody {
+            padding: 55px 0;
+            width: 100%;
+        }
+
+        .footerDiv {
+            position: fixed;
+            bottom: 0;
+            height: 23px;
+            width: 100%;
+            background: white;
+            font-family: Cambria;
+            box-shadow: 0px 0px 10px black;
+        }
+
+            .footerDiv footer {
+                height: 100%;
+                font-size: 14px;
+                font-weight: 700;
+                color: #266590;
+                font-family: Cambria;
+            }
+
+        .footerLeft {
+            float: left;
+            margin-left: 2px;
+        }
+
+        .footerCenter {
+            margin-top: -2px;
+            height: 20px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-right: -50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .footerRight {
+            float: right;
+            margin-right: 2px;
+        }
+    </style>
+
+
+
+    <script src="../AndonScripts/jquery-3.1.0.min.js"></script>
+
+    <script src="../AndonScripts/bootstrap.min.js"></script>
+    <link href="../AndonContent/bootstrap-glyphicons.css" rel="stylesheet" />
+
+    <%--<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">--%>
+    <%--<link href="../LoginDemo/fonts/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" />--%>
+</head>
+<body>
+    <form runat="server">
+        <%--  --%>
+        <asp:ScriptManager runat="server">
+
+            <Scripts>
+                <asp:ScriptReference Name="MsAjaxBundle" />
+                <%--<asp:ScriptReference Name="jquery" />--%>
+                <%--<asp:ScriptReference Name="bootstrap" />--%>
+                <%--<asp:ScriptReference Name="respond" />--%>
+                <asp:ScriptReference Name="jquery" />
+                <asp:ScriptReference Name="jquery.ui.combined" />
+                <asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/AndonScripts/WebForms/WebForms.js" />
+                <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" Path="~/AndonScripts/WebForms/WebUIValidation.js" />
+                <asp:ScriptReference Name="MenuStandards.js" Assembly="System.Web" Path="~/AndonScripts/WebForms/MenuStandards.js" />
+                <asp:ScriptReference Name="GridView.js" Assembly="System.Web" Path="~/AndonScripts/WebForms/GridView.js" />
+                <asp:ScriptReference Name="DetailsView.js" Assembly="System.Web" Path="~/AndonScripts/WebForms/DetailsView.js" />
+                <asp:ScriptReference Name="TreeView.js" Assembly="System.Web" Path="~/AndonScripts/WebForms/TreeView.js" />
+                <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/AndonScripts/WebForms/WebParts.js" />
+                <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/AndonScripts/WebForms/Focus.js" />
+                <asp:ScriptReference Name="WebFormsBundle" />
+            </Scripts>
+        </asp:ScriptManager>
+        <%-- <div class="row">
+           <div class=""></div>
+             <div class=""></div>
+        </div>--%>
+
+        <div id="menu" style="z-index: 12">
+            <div id="myDropdown" class="btn-group part1 dropdownmenue">
+                <img class="btn dropdown-toggle iconbtn" data-toggle="dropdown" src="../Image/menuIcon1.png" />
+                <ul class="dropdown-menu pull-left" style="text-align: left">
+                    <li class="showbusy"><a href="Andon.aspx">Iconic View</a></li>
+                    <li class="showbusy"><a href="AndonSettings.aspx">Configuration</a></li>
+                </ul>
+            </div>
+            <div class="part2">
+                <h1 class="myheader"><%=settings==null?"MFE Elements":settings.AppUISettings.AndonTitle %></h1>
+            </div>
+            <div class="part3">
+                <%-- <asp:UpdatePanel ID="headerPanle" runat="server">
+                    <ContentTemplate>--%>
+                <table style="width: 100%">
+                    <tr>
+                        <td>
+                            <asp:DropDownList ID="ddlPlantName" Style="width: 150px; max-width: 140px;" runat="server"
+                                CssClass="select form-control dropdowncss" ToolTip="Select Plant" OnSelectedIndexChanged="ddlPlantName_SelectedIndexChanged">
+                            </asp:DropDownList></td>
+                         <td>
+                            <asp:DropDownList ID="ddlLine" Style="width: 150px; max-width: 140px;" runat="server"
+                                CssClass="select form-control dropdowncss" ToolTip="Select Line">
+                            </asp:DropDownList></td>
+                        <td id="fristDate" class="input-group" runat="server">
+                            <div class="input-group-addon">
+                                <i class="glyphicon glyphicon-calendar"></i>
+                            </div>
+                            <asp:TextBox ID="txtDate" runat="server" CssClass="form-control dropdowncss date1" data-toggle="tooltip"
+                                title="From Date !" placeholder="From Date" Style="width: 100%; max-width: 165px; padding-left: 3px;"></asp:TextBox>
+                        </td>
+                        <td></td>
+                        <%--<td id="secondDate" class="input-group">
+                            <div class="input-group-addon">
+                                <i class="glyphicon glyphicon-calendar"></i>
+                            </div>
+                            <asp:TextBox ID="txtToDate" runat="server" CssClass="form-control dropdowncss date2" data-toggle="tooltip"
+                                title="To Date !" placeholder="To Date" Style="width: 100%; max-width: 165px; padding-left: 3px;"></asp:TextBox>
+                        </td>--%>
+                      <%--  <td>
+                            <asp:DropDownList ID="ddlShift" runat="server" CssClass="select form-control dropdowncss"
+                                ToolTip="Predefine Time Period" Style="min-width: 100px; max-width: 168px;">
+                            </asp:DropDownList></td>--%>
+
+                        <td style="padding-left: 2px;">
+                            <asp:Button ID="btnProcess" runat="server" Text="Process" CssClass="btn btn-primary" />
+                        </td>
+                        <%--<td style="padding-left: 4px;">
+                            <asp:ImageButton ID="imhNtn" runat="server" ToolTip="Export" ImageUrl="~/Image/McStatus/export-arrow (1).png" />
+                        </td>--%>
+                        <td style="padding-left: 4px; cursor: pointer;">
+                            <button type="button" class="btn btn-info btn-sm" id="btnGenerate" runat="server" visible="false">
+                                <span class="glyphicon glyphicon-export"></span>Export
+                            </button>
+                            <%-- <i class="glyphicon glyphicon-download-alt" style="font-size: 25px;"></i>--%>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <asp:Label ID="lblErrorMsg" EnableViewState="false" runat="server"></asp:Label>
+                        </td>
+                    </tr>
+                </table>
+                <%--   </ContentTemplate>
+                </asp:UpdatePanel>--%>
+            </div>
+            <div class="part4">
+                <asp:Image ID="Image1" runat="server" CssClass="companyicon" />
+            </div>
+        </div>
+
+        <div id="divBody">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <div class="footerDiv">
+            <footer>
+                <div class="footerLeft">Powered by TPM-Trak</div>
+                <div class="footerCenter">
+                    <asp:Button ID="btnToggel" runat="server" CssClass="btn btn-primary btn-xs" OnClick="btnToggel_Click" />
+
+                </div>
+                <div class="footerRight">
+                    <asp:UpdatePanel ID="update" runat="server">
+                        <ContentTemplate>
+                            Data updated at  <span id="spandatetime"><%=DateTime.Now.ToString("HH:mm, dd'th' MMMM yyyy") %></span>.
+                        </ContentTemplate>
+                    </asp:UpdatePanel>
+                </div>
+            </footer>
+        </div>
+    </form>
+    <script src="../Scripts/DateTimePicker/bootstrap-datepicker.js"></script>
+    <link href="../Scripts/DateTimePicker/bootstrap-datepicker3.css" rel="stylesheet" />
+    <script src="../AndonScripts/LoadingImgJs/JavaScriptUIBlocker.js"></script>
+    <script type="text/javascript">
+        dateTimePicker();
+        function dateTimePicker() {
+            $('[id$=txtDate]').datepicker({
+                format: 'dd-M-yyyy',
+                //container: container,
+                todayHighlight: true,
+                autoclose: true,
+            });
+         
+            //$("[id$=txtDate]").on("dp.change", function (e) {
+            //    $('.date2').data("DateTimePicker").minDate(e.date);
+            //});
+            //$("[id$=txtToDate]").on("dp.change", function (e) {
+            //    $('.date1').data("DateTimePicker").maxDate(e.date);
+            //});
+        }
+
+        $(document).ready(function () {
+            $.unblockUI({});
+            if ($("[id$=btnToggel]").val() == "Swich to ANDON Mode") {
+                $("#fristDate").show();
+                $("#secondDate").show();
+            }
+            else {
+                $("#fristDate").hide();
+                $("#secondDate").hide();
+            }
+        });
+
+        $(document).on("click", ".showbusy", function () {
+            $.blockUI({ message: '<img src="../Image/LoadingImg/logo.jpg" style="height: 160px"  />' });
+            //setTimeout(function () {
+            //    $.unblockUI({});
+            //}, 20000);
+        });
+
+        $(document).on("click", "[id$=btnToggel]", function () {
+            $.blockUI({ message: '<img src="../Image/LoadingImg/logo.jpg" style="height: 160px"  />' });
+        });
+        var prm = Sys.WebForms.PageRequestManager.getInstance();
+        prm.add_endRequest(function () {
+            $.unblockUI({});
+            $('[id$=txtDate]').datepicker({
+                format: 'dd-M-yyyy',
+                //container: container,
+                todayHighlight: true,
+                autoclose: true,
+            });
+            if ($("[id$=btnToggel]").val() == "Swich to ANDON Mode") {
+                $("#fristDate").show();
+            }
+            else {
+                $("#fristDate").hide();
+            }
+            dateTimePicker();
+        });
+    </script>
+</body>
+</html>

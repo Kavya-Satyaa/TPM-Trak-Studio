@@ -1,0 +1,258 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="PageResource1.Title" xml:space="preserve">
+    <value>Dashboard Information</value>
+  </data>
+  <data name="txtDayResource1.ToolTip" xml:space="preserve">
+    <value>Day</value>
+  </data>
+  <data name="txtMonthResource1.ToolTip" xml:space="preserve">
+    <value>Month</value>
+  </data>
+  <data name="txtYearResource1.ToolTip" xml:space="preserve">
+    <value>Year</value>
+  </data>
+  <data name="graphAsixDown" xml:space="preserve">
+    <value>Time in</value>
+  </data>
+  <data name="graphAsixPercentage" xml:space="preserve">
+    <value>Value in percentage</value>
+  </data>
+  <data name="graphAsixValue" xml:space="preserve">
+    <value>Value in count</value>
+  </data>
+  <data name="search here..." xml:space="preserve">
+    <value>search here...</value>
+  </data>
+  <data name="txtDayResource1.placeholder" xml:space="preserve">
+    <value>Day</value>
+  </data>
+  <data name="txtMonthResource1.placeholder" xml:space="preserve">
+    <value>Month</value>
+  </data>
+  <data name="txtYearResource1.placeholder" xml:space="preserve">
+    <value>Year</value>
+  </data>
+  <data name="Accepted Bar Chart!" xml:space="preserve">
+    <value>Accepted Bar Chart!</value>
+  </data>
+  <data name="Accepted Line Chart!" xml:space="preserve">
+    <value>Accepted Line Chart!</value>
+  </data>
+  <data name="AE Bar Chart!" xml:space="preserve">
+    <value>AE Bar Chart!</value>
+  </data>
+  <data name="AE Line Chart!" xml:space="preserve">
+    <value>AE Line Chart!</value>
+  </data>
+  <data name="Downtime Bar Chart!" xml:space="preserve">
+    <value>Downtime Bar Chart!</value>
+  </data>
+  <data name="Downtime Line Chart!" xml:space="preserve">
+    <value>Downtime Line Chart!</value>
+  </data>
+  <data name="OEEBarChart" xml:space="preserve">
+    <value>OEE Bar Chart!</value>
+  </data>
+  <data name="OEELineChart" xml:space="preserve">
+    <value>OEE Line Chart!</value>
+  </data>
+  <data name="PE Bar Chart!" xml:space="preserve">
+    <value>PE Bar Chart!</value>
+  </data>
+  <data name="PE Line Chart!" xml:space="preserve">
+    <value>PE Line Chart!</value>
+  </data>
+  <data name="QE Bar Chart!" xml:space="preserve">
+    <value>QE Bar Chart!</value>
+  </data>
+  <data name="QE Line Chart!" xml:space="preserve">
+    <value>QE Line Chart!</value>
+  </data>
+  <data name="Rejected Bar Chart!" xml:space="preserve">
+    <value>Rejected Bar Chart!</value>
+  </data>
+  <data name="Rejected Line Chart!" xml:space="preserve">
+    <value>Rejected Line Chart!</value>
+  </data>
+  <data name="Rework Bar Chart!" xml:space="preserve">
+    <value>Rework Bar Chart!</value>
+  </data>
+  <data name="Rework Line Chart!" xml:space="preserve">
+    <value>Rework Line Chart!</value>
+  </data>
+  <data name="PleaseEnterMonth" xml:space="preserve">
+    <value>Please Enter Month !!</value>
+  </data>
+  <data name="PleaseEnterYear" xml:space="preserve">
+    <value>Please Enter Year !!</value>
+  </data>
+  <data name="Component" xml:space="preserve">
+    <value>Component</value>
+  </data>
+  <data name="Machine" xml:space="preserve">
+    <value>Machine</value>
+  </data>
+  <data name="Operator" xml:space="preserve">
+    <value>Operator</value>
+  </data>
+  <data name="Plant" xml:space="preserve">
+    <value>Plant</value>
+  </data>
+  <data name="AcceptedParts" xml:space="preserve">
+    <value>AcceptedParts</value>
+  </data>
+  <data name="AE" xml:space="preserve">
+    <value>AE</value>
+  </data>
+  <data name="DownTime" xml:space="preserve">
+    <value>DownTime</value>
+  </data>
+  <data name="OEE" xml:space="preserve">
+    <value>OEE</value>
+  </data>
+  <data name="PE" xml:space="preserve">
+    <value>PE</value>
+  </data>
+  <data name="QE" xml:space="preserve">
+    <value>QE</value>
+  </data>
+  <data name="RejCount" xml:space="preserve">
+    <value>RejCount</value>
+  </data>
+  <data name="ReworkPerformed" xml:space="preserve">
+    <value>ReworkPerformed</value>
+  </data>
+  <data name="Cell" xml:space="preserve">
+    <value>Cell</value>
+  </data>
+  <data name="PPM" xml:space="preserve">
+    <value>PPM</value>
+  </data>
+  <data name="PPM Bar Chart!" xml:space="preserve">
+    <value>PPM Bar Chart!</value>
+  </data>
+  <data name="PPM Line Chart!" xml:space="preserve">
+    <value>PPM Line Chart!</value>
+  </data>
+  <data name="AvgMcHrRate" xml:space="preserve">
+    <value>AvgMcHrRate</value>
+  </data>
+</root>

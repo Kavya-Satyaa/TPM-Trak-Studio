@@ -1,0 +1,50 @@
+﻿.header-center {
+    text-align: center;
+}
+
+table tr th {
+    text-align: center !important;
+}
+
+.headerFixerhere tr th {
+    position: sticky;
+    top: -1px;
+    z-index: 1;
+    background-color: #5391CA;
+    color: white;
+}
+
+.DataOperations {
+    bottom: 0;
+    right: 0;
+    float: right;
+    margin-right: 5px;
+    min-height: 40px;
+    position: fixed;
+    width: auto;
+}
+
+.Row {
+    display: table;
+    border-spacing: 5pt;
+    width: 100%;
+}
+
+.Col {
+    display: table-cell;
+    height: 50px;
+    width: 100%;
+    border: 1pt solid black;
+    background-color: #DBDBDB;
+}
+
+.MiddleLeft {
+    text-align: left;
+    align-items: normal;
+    vertical-align: middle;
+}
+
+.btnStyle {
+    margin-left: 2px;
+    margin-right: 2px;
+}

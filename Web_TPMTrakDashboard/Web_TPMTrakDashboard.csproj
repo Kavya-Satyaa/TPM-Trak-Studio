@@ -2362,6 +2362,11 @@
     </Content>
     <Content Include="Bundle.config" />
     <Content Include="WebAndon\AndonMaster.Master" />
+    <Content Include="GeneratedSolutions\First\First.aspx" />
+    <Content Include="GeneratedSolutions\aaa\aaa.aspx" />
+    <Content Include="GeneratedSolutions\testest\testest.aspx" />
+    <Content Include="GeneratedSolutions\MasterScreen\MasterScreen.aspx" />
+    <Content Include="GeneratedSolutions\TPM_New\TPM_New.aspx" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Scripts\_references.js" />
@@ -5298,6 +5303,7 @@
     <Folder Include="EnergyModule\Reports\Temp\" />
     <Folder Include="GEA\Reports\GeneratedReports\" />
     <Folder Include="GEA\Reports\ReportTemplates-zh\" />
+    <Folder Include="GeneratedSolutions\" />
     <Folder Include="Logs\" />
     <Folder Include="Nippon\AndonMachineImages\" />
     <Folder Include="Pooja\ImportedFiles\" />
